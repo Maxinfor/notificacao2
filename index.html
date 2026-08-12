@@ -4,8 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
     <title>Notificação - Conselho Tutelar do Paranoá</title>
+    
+    <!-- ===== FAVICON ===== -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90' font-weight='bold' fill='%23fbbf24'>🏛️</text></svg>">
+    <link rel="shortcut icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90' font-weight='bold' fill='%23fbbf24'>🏛️</text></svg>">
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
+        /* ===== ESTILOS COMPLETOS ===== */
         * {
             margin: 0;
             padding: 0;
@@ -54,51 +60,105 @@
             z-index: 1;
         }
 
-        /* ===== TÍTULO SUPERIOR ===== */
+        /* ===== TÍTULO SUPERIOR COM LOGO ===== */
         .header-title {
             text-align: center;
             margin-bottom: 16px;
             padding: 8px 16px;
         }
 
-        .header-title .titulo-principal {
-            font-size: 1.6rem;
+        .header-title .logo-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 14px;
+            flex-wrap: wrap;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 10px 20px;
+            border-radius: 16px;
+            border: 1px solid rgba(255, 215, 0, 0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .header-title .logo-icone {
+            font-size: 2.4rem;
+            color: #fbbf24;
+            background: rgba(251, 191, 36, 0.1);
+            padding: 8px 14px;
+            border-radius: 12px;
+            border: 2px solid rgba(251, 191, 36, 0.2);
+            line-height: 1;
+        }
+
+        .header-title .logo-texto {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .header-title .logo-texto .titulo-principal {
+            font-size: 1.5rem;
             font-weight: 800;
             color: #ffffff;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 12px;
-            flex-wrap: wrap;
             text-shadow: 0 2px 15px rgba(0,0,0,0.2);
+            letter-spacing: 1px;
+            line-height: 1.2;
         }
 
-        .header-title .titulo-principal i {
+        .header-title .logo-texto .titulo-principal .destaque {
             color: #fbbf24;
-            font-size: 1.6rem;
-            background: rgba(255, 255, 255, 0.08);
-            padding: 10px;
-            border-radius: 50%;
-            width: 46px;
-            height: 46px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border: 1px solid rgba(255,215,0,0.15);
         }
 
-        .header-title .subtitulo {
+        .header-title .logo-texto .subtitulo {
             color: rgba(255, 255, 255, 0.5);
-            font-size: 0.75rem;
+            font-size: 0.7rem;
             font-weight: 300;
-            letter-spacing: 3px;
-            margin-top: 2px;
+            letter-spacing: 2px;
             text-transform: uppercase;
+            margin-top: 2px;
         }
 
-        .header-title .subtitulo i {
+        .header-title .logo-texto .subtitulo i {
             color: #fbbf24;
             margin: 0 4px;
+        }
+
+        .header-title .logo-texto .subtitulo .separador {
+            color: rgba(255, 255, 255, 0.2);
+            margin: 0 6px;
+        }
+
+        .header-title .logo-texto .subtitulo .telefone-logo {
+            color: #fbbf24;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+        @media (max-width: 480px) {
+            .header-title .logo-container {
+                flex-direction: column;
+                padding: 12px 16px;
+                gap: 8px;
+            }
+
+            .header-title .logo-texto {
+                align-items: center;
+                text-align: center;
+            }
+
+            .header-title .logo-texto .titulo-principal {
+                font-size: 1.2rem;
+            }
+
+            .header-title .logo-icone {
+                font-size: 2rem;
+                padding: 6px 12px;
+            }
+
+            .header-title .logo-texto .subtitulo {
+                font-size: 0.6rem;
+                letter-spacing: 1px;
+            }
         }
 
         /* ===== NAVEGAÇÃO ===== */
@@ -880,17 +940,6 @@
                 font-size: 0.7rem;
             }
 
-            .header-title .titulo-principal {
-                font-size: 1.3rem;
-            }
-
-            .header-title .titulo-principal i {
-                font-size: 1.3rem;
-                width: 40px;
-                height: 40px;
-                padding: 8px;
-            }
-
             .barra-pesquisa {
                 flex-direction: column;
             }
@@ -985,21 +1034,6 @@
                 min-width: 350px;
             }
 
-            .header-title .titulo-principal {
-                font-size: 1.1rem;
-            }
-
-            .header-title .titulo-principal i {
-                font-size: 1.1rem;
-                width: 34px;
-                height: 34px;
-                padding: 6px;
-            }
-
-            .header-title .subtitulo {
-                font-size: 0.6rem;
-            }
-
             .nav-tab {
                 padding: 5px 12px;
                 font-size: 0.6rem;
@@ -1045,14 +1079,19 @@
     </div>
 
     <div class="container">
-        <!-- ===== TÍTULO SUPERIOR ===== -->
+        <!-- ===== TÍTULO SUPERIOR COM LOGO ===== -->
         <div class="header-title">
-            <div class="titulo-principal">
-                <i class="fas fa-gavel"></i>
-                NOTIFICAÇÃO
-            </div>
-            <div class="subtitulo">
-                <i class="fas fa-map-pin"></i> Conselho Tutelar do Paranoá
+            <div class="logo-container">
+                <div class="logo-icone">🏛️</div>
+                <div class="logo-texto">
+                    <div class="titulo-principal">
+                        <span class="destaque">CONSELHO</span> TUTELAR
+                    </div>
+                    <div class="subtitulo">
+                        <i class="fas fa-map-pin"></i> Paranoá <span class="separador">|</span> 
+                        <i class="fas fa-phone"></i> <span class="telefone-logo">9.9241-2057</span>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -1074,7 +1113,7 @@
                     <h2>
                         <i class="fas fa-file-signature"></i> NOVA NOTIFICAÇÃO
                     </h2>
-                    <span class="sub-badge"><i class="fas fa-phone"></i> (61) 99999-8888</span>
+                    <span class="sub-badge"><i class="fas fa-phone"></i> 9.9241-2057</span>
                 </div>
 
                 <div class="card-body">
@@ -1082,7 +1121,7 @@
                     <div class="grid-2">
                         <div class="campo">
                             <label for="responsavel"><i class="fas fa-user"></i> Responsável</label>
-                            <input type="text" id="responsavel" placeholder="Nome do responsável" value="">
+                            <input type="text" id="responsavel" placeholder="Nome do(a) responsável" value="">
                         </div>
                         <div class="campo">
                             <label for="telefone"><i class="fas fa-phone"></i> Telefone</label>
@@ -1330,6 +1369,16 @@
                 }
             }
 
+            function obterTratamento(nome) {
+                if (!nome || nome.trim() === '') return 'Sr(a).';
+                const femininas = ['a', 'e', 'i', 'o', 'u', 'á', 'é', 'í', 'ó', 'ú', 'ã', 'õ', 'â', 'ê', 'ô'];
+                const ultimaLetra = nome.trim().toLowerCase().slice(-1);
+                if (femininas.includes(ultimaLetra)) {
+                    return 'Sra.';
+                }
+                return 'Sr.';
+            }
+
             function gerarMensagem() {
                 const nomeResp = responsavel.value.trim() || "RESPONSÁVEL";
                 const nomeCrianca = criancaInput.value.trim();
@@ -1339,6 +1388,7 @@
                 const temCriancaChecked = temCrianca.checked;
 
                 const saudacao = obterSaudacao(horaRaw);
+                const tratamento = obterTratamento(nomeResp);
 
                 let dataFormatada = dataRaw;
                 if (dataRaw.includes('-')) {
@@ -1360,16 +1410,16 @@
                 msg += `Somos do Conselho Tutelar do Paranoá.\n\n`;
 
                 if (!temCriancaChecked) {
-                    msg += `Solicitamos o comparecimento da Sra. ${nomeRespNegrito}, para atendimento e esclarecimentos relacionados à criança/adolescente.\n\n`;
+                    msg += `Solicitamos o comparecimento da ${tratamento} ${nomeRespNegrito}, para atendimento e esclarecimentos relacionados à criança/adolescente.\n\n`;
                     msg += `Ressaltamos que este é um atendimento com a responsável, não sendo necessário trazer a criança/adolescente neste momento.\n\n`;
                 } else {
                     if (nomeCrianca === '') {
-                        msg += `Solicitamos o comparecimento da Sra. ${nomeRespNegrito}, responsável por criança/adolescente não informado(a), para atendimento e esclarecimentos relacionados à criança/adolescente.\n\n`;
+                        msg += `Solicitamos o comparecimento da ${tratamento} ${nomeRespNegrito}, responsável por criança/adolescente não informado(a), para atendimento e esclarecimentos relacionados à criança/adolescente.\n\n`;
                     } else {
-                        msg += `Solicitamos o comparecimento da Sra. ${nomeRespNegrito}, responsável por ${nomeCriancaNegrito}, para atendimento e esclarecimentos relacionados à criança/adolescente.\n\n`;
+                        msg += `Solicitamos o comparecimento da ${tratamento} ${nomeRespNegrito}, responsável por ${nomeCriancaNegrito}, para atendimento e esclarecimentos relacionados à criança/adolescente.\n\n`;
                     }
-                    msg += `Solicitamos que a responsável compareça acompanhada de ${nomeCriancaNegrito} e apresente, se disponíveis:\n\n`;
-                    msg += `• Documento de identificação da responsável;\n`;
+                    msg += `Solicitamos que o(a) responsável compareça acompanhado(a) de ${nomeCriancaNegrito} e apresente, se disponíveis:\n\n`;
+                    msg += `• Documento de identificação do(a) responsável;\n`;
                     msg += `• Documento de identificação da criança/adolescente ou certidão de nascimento;\n`;
                     msg += `• Comprovante de residência;\n`;
                     msg += `• Cartão de vacinação;\n`;
@@ -1622,11 +1672,16 @@
             btnWhats.addEventListener('click', function(e) {
                 e.preventDefault();
                 
-                // Verifica se o telefone foi informado
                 const telefoneVal = telefone.value.trim();
                 if (!telefoneVal || telefoneVal.length < 10) {
                     mostrarToast('Por favor, informe um telefone válido com DDD.', 'info');
                     telefone.focus();
+                    return;
+                }
+
+                if (!responsavel.value.trim()) {
+                    mostrarToast('Por favor, informe o nome do(a) responsável.', 'info');
+                    responsavel.focus();
                     return;
                 }
 
@@ -1645,7 +1700,6 @@
                 }
                 window.open(url, '_blank');
 
-                // Salva no histórico
                 const nomeResp = responsavel.value.trim() || 'NÃO INFORMADO';
                 const nomeCrianca = temCrianca.checked ? criancaInput.value.trim() : '';
                 const dataRaw = dataInput.value || new Date().toISOString().split('T')[0];
@@ -1679,15 +1733,12 @@
                 contadorHistorico.textContent = historico.length;
 
                 mostrarToast('Mensagem enviada com sucesso!', 'success');
-                
-                // LIMPA TODOS OS CAMPOS após o envio
                 limparCampos();
             });
 
             btnSalvar.addEventListener('click', function() {
-                // Verifica se o responsável foi informado
                 if (!responsavel.value.trim()) {
-                    mostrarToast('Por favor, informe o nome do responsável.', 'info');
+                    mostrarToast('Por favor, informe o nome do(a) responsável.', 'info');
                     responsavel.focus();
                     return;
                 }
