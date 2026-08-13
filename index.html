@@ -17,11 +17,10 @@
         body {
             background: linear-gradient(135deg, #0c1445 0%, #1a2a6c 30%, #1e3a8a 60%, #2563eb 100%);
             min-height: 100vh;
-            padding: 12px 10px;
+            padding: 20px 16px;
             display: flex;
             align-items: flex-start;
             justify-content: center;
-            padding-bottom: 30px;
         }
 
         body::before {
@@ -31,7 +30,7 @@
             right: -10%;
             width: 600px;
             height: 600px;
-            background: radial-gradient(circle, rgba(255,215,0,0.05) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(255,215,0,0.06) 0%, transparent 70%);
             border-radius: 50%;
             pointer-events: none;
         }
@@ -49,53 +48,52 @@
         }
 
         .container {
-            max-width: 480px;
+            max-width: 100%;
             width: 100%;
             margin: 0 auto;
             position: relative;
             z-index: 1;
-            padding-bottom: 10px;
         }
 
         /* ===== TÍTULO SUPERIOR ===== */
         .header-title {
             text-align: center;
-            margin-bottom: 14px;
-            padding: 6px 10px;
+            margin-bottom: 20px;
+            padding: 10px 0;
         }
 
         .header-title .titulo-principal {
-            font-size: 1.4rem;
+            font-size: 2rem;
             font-weight: 800;
             color: #ffffff;
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 10px;
+            gap: 14px;
             flex-wrap: wrap;
             text-shadow: 0 2px 15px rgba(0,0,0,0.2);
         }
 
         .header-title .titulo-principal i {
             color: #fbbf24;
-            font-size: 1.3rem;
+            font-size: 2rem;
             background: rgba(255, 255, 255, 0.08);
-            padding: 8px;
+            padding: 12px;
             border-radius: 50%;
-            width: 40px;
-            height: 40px;
+            width: 56px;
+            height: 56px;
             display: flex;
             align-items: center;
             justify-content: center;
-            border: 1px solid rgba(255,215,0,0.12);
+            border: 1px solid rgba(255,215,0,0.15);
         }
 
         .header-title .subtitulo {
-            color: rgba(255, 255, 255, 0.45);
-            font-size: 0.65rem;
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.9rem;
             font-weight: 300;
-            letter-spacing: 2px;
-            margin-top: 2px;
+            letter-spacing: 3px;
+            margin-top: 6px;
             text-transform: uppercase;
         }
 
@@ -107,59 +105,59 @@
         /* ===== NAVEGAÇÃO ===== */
         .nav-tabs {
             display: flex;
-            gap: 6px;
-            margin-bottom: 14px;
+            gap: 10px;
+            margin-bottom: 20px;
             justify-content: center;
             flex-wrap: wrap;
         }
 
         .nav-tab {
-            padding: 10px 20px;
-            background: rgba(255, 255, 255, 0.06);
-            color: rgba(255, 255, 255, 0.5);
-            border: 1px solid rgba(255, 255, 255, 0.06);
+            padding: 14px 32px;
+            background: rgba(255, 255, 255, 0.08);
+            color: rgba(255, 255, 255, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.08);
             border-radius: 50px;
-            font-size: 0.75rem;
+            font-size: 1rem;
             font-weight: 600;
             cursor: pointer;
             transition: all 0.3s ease;
             backdrop-filter: blur(10px);
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 10px;
             -webkit-tap-highlight-color: transparent;
             touch-action: manipulation;
         }
 
         .nav-tab:active {
-            transform: scale(0.95);
+            transform: scale(0.97);
         }
 
         .nav-tab:hover {
-            background: rgba(255, 255, 255, 0.12);
+            background: rgba(255, 255, 255, 0.15);
             color: #fff;
-            border-color: rgba(255, 215, 0, 0.2);
+            border-color: rgba(255, 215, 0, 0.3);
         }
 
         .nav-tab.active {
             background: linear-gradient(135deg, #fbbf24, #f59e0b);
             color: #0c1445;
             border-color: #fbbf24;
-            box-shadow: 0 4px 15px rgba(251, 191, 36, 0.2);
+            box-shadow: 0 6px 25px rgba(251, 191, 36, 0.25);
         }
 
         .nav-tab i {
-            font-size: 0.85rem;
+            font-size: 1.1rem;
         }
 
         .nav-tab .badge-contador {
             background: #ef4444;
             color: white;
             border-radius: 50%;
-            padding: 0 6px;
-            font-size: 0.5rem;
-            line-height: 16px;
-            min-width: 16px;
+            padding: 0 8px;
+            font-size: 0.65rem;
+            line-height: 20px;
+            min-width: 20px;
             text-align: center;
         }
 
@@ -173,7 +171,7 @@
         }
 
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(12px); }
+            from { opacity: 0; transform: translateY(15px); }
             to { opacity: 1; transform: translateY(0); }
         }
 
@@ -181,18 +179,18 @@
         .card {
             background: rgba(255, 255, 255, 0.96);
             backdrop-filter: blur(20px);
-            border-radius: 18px;
-            padding: 16px 14px 14px;
+            border-radius: 24px;
+            padding: 28px 24px 24px;
             width: 100%;
-            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
             transition: 0.3s;
             border: 1px solid rgba(255, 255, 255, 0.12);
         }
 
         .card-header {
             text-align: center;
-            margin-bottom: 14px;
-            padding-bottom: 10px;
+            margin-bottom: 20px;
+            padding-bottom: 14px;
             border-bottom: 2px solid rgba(37, 99, 235, 0.08);
             position: relative;
         }
@@ -203,31 +201,31 @@
             bottom: -2px;
             left: 50%;
             transform: translateX(-50%);
-            width: 35px;
+            width: 50px;
             height: 3px;
             background: linear-gradient(90deg, #fbbf24, #f59e0b);
             border-radius: 10px;
         }
 
         .card-header h2 {
-            font-size: 1.1rem;
+            font-size: 1.5rem;
             font-weight: 800;
             color: #0c1445;
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 8px;
+            gap: 12px;
             flex-wrap: wrap;
         }
 
         .card-header h2 i {
             color: #2563eb;
-            font-size: 1.1rem;
+            font-size: 1.4rem;
             background: linear-gradient(135deg, #dbeafe, #bfdbfe);
-            padding: 6px;
+            padding: 8px;
             border-radius: 50%;
-            width: 34px;
-            height: 34px;
+            width: 44px;
+            height: 44px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -237,16 +235,16 @@
             background: linear-gradient(135deg, #dbeafe, #bfdbfe);
             color: #1e3a8a;
             font-weight: 600;
-            padding: 3px 14px;
+            padding: 4px 20px;
             border-radius: 40px;
-            font-size: 0.6rem;
+            font-size: 0.8rem;
             display: inline-block;
-            margin-top: 3px;
+            margin-top: 4px;
             border: 1px solid rgba(37, 99, 235, 0.1);
         }
 
         .sub-badge i {
-            margin-right: 4px;
+            margin-right: 6px;
             color: #2563eb;
         }
 
@@ -254,13 +252,13 @@
         .grid-2 {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 10px;
+            gap: 16px;
         }
 
         .grid-3 {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
-            gap: 10px;
+            gap: 16px;
         }
 
         /* ===== CAMPOS ===== */
@@ -272,28 +270,28 @@
         .campo label {
             font-weight: 600;
             color: #1e3a8a;
-            margin-bottom: 3px;
-            font-size: 0.6rem;
+            margin-bottom: 5px;
+            font-size: 0.8rem;
             display: flex;
             align-items: center;
-            gap: 4px;
+            gap: 6px;
             letter-spacing: 0.6px;
             text-transform: uppercase;
         }
 
         .campo label i {
             color: #2563eb;
-            width: 14px;
-            font-size: 0.65rem;
+            width: 18px;
+            font-size: 0.85rem;
             text-align: center;
         }
 
         .campo input,
         .campo select {
-            padding: 10px 12px;
+            padding: 14px 16px;
             border: 2px solid #e2e8f0;
-            border-radius: 10px;
-            font-size: 0.85rem;
+            border-radius: 12px;
+            font-size: 1rem;
             background: #f8fafc;
             transition: all 0.25s ease;
             width: 100%;
@@ -301,7 +299,7 @@
             appearance: none;
             color: #1a2e3f;
             text-transform: uppercase;
-            min-height: 44px;
+            min-height: 52px;
             touch-action: manipulation;
         }
 
@@ -310,32 +308,32 @@
             border-color: #2563eb;
             outline: none;
             background: #ffffff;
-            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.08);
+            box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.08);
         }
 
         .campo input::placeholder {
             color: #94a3b8;
             text-transform: none;
-            font-size: 0.8rem;
+            font-size: 0.95rem;
         }
 
         .campo select {
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%232563eb' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%232563eb' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
             background-repeat: no-repeat;
-            background-position: right 10px center;
-            background-size: 12px;
+            background-position: right 14px center;
+            background-size: 14px;
             cursor: pointer;
-            padding-right: 32px;
+            padding-right: 40px;
         }
 
         .campo small {
             color: #64748b;
-            font-size: 0.5rem;
-            margin-top: 2px;
+            font-size: 0.65rem;
+            margin-top: 4px;
         }
 
         .campo small i {
-            margin-right: 3px;
+            margin-right: 4px;
             color: #2563eb;
         }
 
@@ -343,24 +341,24 @@
         .checkbox-group {
             display: flex;
             flex-wrap: wrap;
-            gap: 8px;
-            margin: 2px 0 4px;
+            gap: 12px;
+            margin: 4px 0 8px;
         }
 
         .checkbox-item {
             flex: 1;
-            min-width: 100%;
-            padding: 10px 14px;
-            border-radius: 10px;
+            min-width: 160px;
+            padding: 14px 18px;
+            border-radius: 12px;
             border: 2px solid #e2e8f0;
             background: #f8fafc;
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 12px;
             transition: all 0.25s ease;
             cursor: pointer;
             touch-action: manipulation;
-            min-height: 48px;
+            min-height: 56px;
         }
 
         .checkbox-item:active {
@@ -378,36 +376,36 @@
         }
 
         .checkbox-item input[type="checkbox"] {
-            width: 20px;
-            height: 20px;
+            width: 22px;
+            height: 22px;
             accent-color: #2563eb;
             cursor: pointer;
             flex-shrink: 0;
-            min-width: 20px;
+            min-width: 22px;
         }
 
         .checkbox-item label {
             font-weight: 600;
             color: #1e3a8a;
-            font-size: 0.85rem;
+            font-size: 0.95rem;
             cursor: pointer;
             display: flex;
             align-items: center;
-            gap: 6px;
+            gap: 8px;
             width: 100%;
         }
 
         .checkbox-item label i {
             color: #2563eb;
-            font-size: 0.95rem;
-            width: 18px;
+            font-size: 1.1rem;
+            width: 20px;
         }
 
         .checkbox-item .status-label {
-            font-size: 0.55rem;
+            font-size: 0.65rem;
             font-weight: 700;
             margin-left: auto;
-            padding: 2px 10px;
+            padding: 3px 12px;
             border-radius: 20px;
             background: #bfdbfe;
             color: #1e3a8a;
@@ -432,6 +430,7 @@
             flex: 1;
             min-width: 100%;
             display: none;
+            margin-bottom: 4px;
         }
 
         .campo-crianca-wrapper.visible {
@@ -440,43 +439,43 @@
 
         .campo-crianca-wrapper input {
             width: 100%;
-            padding: 10px 12px;
+            padding: 14px 16px;
             border: 2px solid #e2e8f0;
-            border-radius: 10px;
-            font-size: 0.85rem;
+            border-radius: 12px;
+            font-size: 1rem;
             background: #ffffff;
             text-transform: uppercase;
             transition: 0.2s;
-            min-height: 44px;
+            min-height: 52px;
         }
 
         .campo-crianca-wrapper input:focus {
             border-color: #2563eb;
             outline: none;
-            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.08);
+            box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.08);
         }
 
         /* ===== TIPO ATENDIMENTO ===== */
         .tipo-atendimento {
             background: linear-gradient(135deg, #eff6ff, #dbeafe);
-            border-radius: 10px;
-            padding: 10px 14px;
-            margin: 4px 0 6px;
+            border-radius: 12px;
+            padding: 14px 18px;
+            margin: 6px 0 10px;
             border: 1px solid #bfdbfe;
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 12px;
             flex-wrap: wrap;
         }
 
         .tipo-atendimento i {
-            font-size: 0.95rem;
-            width: 20px;
+            font-size: 1.2rem;
+            width: 26px;
             text-align: center;
         }
 
         .tipo-atendimento .tipo-texto {
-            font-size: 0.75rem;
+            font-size: 0.9rem;
             color: #1e3a8a;
             flex: 1;
         }
@@ -486,19 +485,19 @@
         }
 
         .tipo-atendimento .tipo-badge {
-            padding: 3px 12px;
+            padding: 4px 16px;
             border-radius: 30px;
-            font-size: 0.55rem;
+            font-size: 0.7rem;
             font-weight: 700;
             background: linear-gradient(135deg, #2563eb, #1d4ed8);
             color: white;
-            box-shadow: 0 2px 8px rgba(37, 99, 235, 0.2);
+            box-shadow: 0 2px 10px rgba(37, 99, 235, 0.2);
             white-space: nowrap;
         }
 
         .tipo-atendimento .tipo-badge.apenas-responsavel {
             background: linear-gradient(135deg, #f59e0b, #d97706);
-            box-shadow: 0 2px 8px rgba(245, 158, 11, 0.2);
+            box-shadow: 0 2px 10px rgba(245, 158, 11, 0.2);
         }
 
         /* ===== BOTÕES ===== */
@@ -506,9 +505,51 @@
             background: linear-gradient(135deg, #25d366, #1da851);
             color: white;
             border: none;
-            padding: 14px 16px;
+            padding: 16px 20px;
             border-radius: 50px;
-            font-size: 0.95rem;
+            font-size: 1.1rem;
+            font-weight: 700;
+            width: 100%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            transition: all 0.2s ease;
+            box-shadow: 0 5px 0 #15803d, 0 4px 20px rgba(37, 211, 102, 0.25);
+            margin-top: 6px;
+            letter-spacing: 0.3px;
+            min-height: 60px;
+            touch-action: manipulation;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .btn-whatsapp:active {
+            transform: scale(0.97);
+            box-shadow: 0 3px 0 #15803d;
+        }
+
+        .btn-whatsapp i {
+            font-size: 1.6rem;
+        }
+
+        .btn-whatsapp .telefone-destino {
+            font-size: 0.7rem;
+            font-weight: 400;
+            opacity: 0.9;
+            background: rgba(255,255,255,0.12);
+            padding: 3px 12px;
+            border-radius: 30px;
+            margin-left: 6px;
+        }
+
+        .btn-salvar {
+            background: linear-gradient(135deg, #2563eb, #1d4ed8);
+            color: white;
+            border: none;
+            padding: 16px 20px;
+            border-radius: 50px;
+            font-size: 1.05rem;
             font-weight: 700;
             width: 100%;
             cursor: pointer;
@@ -517,82 +558,40 @@
             justify-content: center;
             gap: 10px;
             transition: all 0.2s ease;
-            box-shadow: 0 4px 0 #15803d, 0 4px 15px rgba(37, 211, 102, 0.2);
-            margin-top: 4px;
-            letter-spacing: 0.3px;
-            min-height: 52px;
-            touch-action: manipulation;
-            -webkit-tap-highlight-color: transparent;
-        }
-
-        .btn-whatsapp:active {
-            transform: scale(0.97);
-            box-shadow: 0 2px 0 #15803d;
-        }
-
-        .btn-whatsapp i {
-            font-size: 1.3rem;
-        }
-
-        .btn-whatsapp .telefone-destino {
-            font-size: 0.6rem;
-            font-weight: 400;
-            opacity: 0.9;
-            background: rgba(255,255,255,0.12);
-            padding: 2px 10px;
-            border-radius: 30px;
-            margin-left: 4px;
-        }
-
-        .btn-salvar {
-            background: linear-gradient(135deg, #2563eb, #1d4ed8);
-            color: white;
-            border: none;
-            padding: 14px 16px;
-            border-radius: 50px;
-            font-size: 0.9rem;
-            font-weight: 700;
-            width: 100%;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            transition: all 0.2s ease;
-            box-shadow: 0 4px 0 #1a3a8a, 0 4px 15px rgba(37, 99, 235, 0.2);
-            margin-top: 4px;
-            min-height: 52px;
+            box-shadow: 0 5px 0 #1a3a8a, 0 4px 20px rgba(37, 99, 235, 0.25);
+            margin-top: 6px;
+            min-height: 60px;
             touch-action: manipulation;
             -webkit-tap-highlight-color: transparent;
         }
 
         .btn-salvar:active {
             transform: scale(0.97);
-            box-shadow: 0 2px 0 #1a3a8a;
+            box-shadow: 0 3px 0 #1a3a8a;
         }
 
         .btn-salvar i {
-            font-size: 1rem;
+            font-size: 1.2rem;
         }
 
         .botoes-row {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 8px;
-            margin-top: 4px;
+            gap: 12px;
+            margin-top: 6px;
         }
 
         .footer-obs {
-            font-size: 0.5rem;
+            font-size: 0.65rem;
             color: #64748b;
             text-align: center;
-            margin-top: 10px;
+            margin-top: 14px;
             border-top: 1px solid #e2e8f0;
-            padding-top: 10px;
+            padding-top: 14px;
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 4px;
+            gap: 6px;
         }
 
         .footer-obs i {
@@ -601,11 +600,11 @@
 
         /* ===== SAUDAÇÃO INDICATOR ===== */
         .saudacao-indicator {
-            font-size: 0.5rem;
+            font-size: 0.65rem;
             background: linear-gradient(135deg, #dbeafe, #bfdbfe);
-            padding: 2px 8px;
+            padding: 3px 10px;
             border-radius: 20px;
-            margin-left: 4px;
+            margin-left: 6px;
             font-weight: 700;
             color: #1e3a8a;
             white-space: nowrap;
@@ -615,8 +614,8 @@
         .barra-pesquisa {
             display: flex;
             flex-direction: column;
-            gap: 8px;
-            margin-bottom: 12px;
+            gap: 10px;
+            margin-bottom: 16px;
         }
 
         .barra-pesquisa .campo {
@@ -625,35 +624,37 @@
 
         .barra-pesquisa .campo input {
             text-transform: none;
-            min-height: 44px;
+            min-height: 52px;
+            font-size: 1rem;
         }
 
         .barra-pesquisa .botoes-pesquisa {
             display: flex;
-            gap: 8px;
+            gap: 10px;
         }
 
         .barra-pesquisa .botoes-pesquisa .btn-pesquisar,
         .barra-pesquisa .botoes-pesquisa .btn-limpar {
             flex: 1;
             justify-content: center;
-            height: 44px;
+            height: 52px;
+            font-size: 0.95rem;
         }
 
         .btn-pesquisar {
             background: linear-gradient(135deg, #2563eb, #1d4ed8);
             color: white;
             border: none;
-            padding: 10px 16px;
+            padding: 12px 20px;
             border-radius: 50px;
-            font-size: 0.8rem;
+            font-size: 0.9rem;
             font-weight: 600;
             cursor: pointer;
             display: flex;
             align-items: center;
-            gap: 6px;
+            gap: 8px;
             transition: all 0.2s ease;
-            box-shadow: 0 3px 0 #1a3a8a;
+            box-shadow: 0 4px 0 #1a3a8a;
             white-space: nowrap;
             touch-action: manipulation;
             -webkit-tap-highlight-color: transparent;
@@ -661,21 +662,21 @@
 
         .btn-pesquisar:active {
             transform: scale(0.97);
-            box-shadow: 0 1px 0 #1a3a8a;
+            box-shadow: 0 2px 0 #1a3a8a;
         }
 
         .btn-limpar {
             background: #f1f5f9;
             color: #1e3a8a;
             border: 2px solid #e2e8f0;
-            padding: 10px 16px;
+            padding: 12px 20px;
             border-radius: 50px;
-            font-size: 0.8rem;
+            font-size: 0.9rem;
             font-weight: 600;
             cursor: pointer;
             display: flex;
             align-items: center;
-            gap: 6px;
+            gap: 8px;
             transition: all 0.2s ease;
             white-space: nowrap;
             touch-action: manipulation;
@@ -688,24 +689,24 @@
 
         .contador {
             background: linear-gradient(135deg, #eff6ff, #dbeafe);
-            padding: 4px 12px;
+            padding: 6px 16px;
             border-radius: 30px;
-            font-size: 0.65rem;
+            font-size: 0.8rem;
             color: #1e3a8a;
             font-weight: 600;
             display: inline-block;
-            margin-bottom: 10px;
+            margin-bottom: 12px;
             border: 1px solid #bfdbfe;
         }
 
         .contador i {
             color: #2563eb;
-            margin-right: 4px;
+            margin-right: 6px;
         }
 
         .tabela-container {
             overflow-x: auto;
-            border-radius: 10px;
+            border-radius: 12px;
             border: 1px solid #e2e8f0;
             background: #f8fafc;
             -webkit-overflow-scrolling: touch;
@@ -714,8 +715,8 @@
         .tabela-notificacoes {
             width: 100%;
             border-collapse: collapse;
-            font-size: 0.7rem;
-            min-width: 550px;
+            font-size: 0.85rem;
+            min-width: 650px;
         }
 
         .tabela-notificacoes thead {
@@ -724,16 +725,16 @@
         }
 
         .tabela-notificacoes thead th {
-            padding: 8px 8px;
+            padding: 12px 14px;
             text-align: left;
             font-weight: 600;
-            font-size: 0.55rem;
-            letter-spacing: 0.6px;
+            font-size: 0.7rem;
+            letter-spacing: 0.8px;
             text-transform: uppercase;
         }
 
         .tabela-notificacoes tbody td {
-            padding: 6px 8px;
+            padding: 10px 14px;
             border-bottom: 1px solid #e2e8f0;
             color: #1e293b;
             vertical-align: middle;
@@ -749,9 +750,9 @@
 
         .badge-status {
             display: inline-block;
-            padding: 2px 8px;
+            padding: 4px 12px;
             border-radius: 30px;
-            font-size: 0.5rem;
+            font-size: 0.65rem;
             font-weight: 600;
         }
 
@@ -767,9 +768,9 @@
 
         .badge-tipo {
             display: inline-block;
-            padding: 2px 8px;
+            padding: 3px 10px;
             border-radius: 30px;
-            font-size: 0.45rem;
+            font-size: 0.6rem;
             font-weight: 700;
         }
 
@@ -785,28 +786,28 @@
 
         .sem-resultados {
             text-align: center;
-            padding: 20px 12px;
+            padding: 30px 16px;
             color: #94a3b8;
         }
 
         .sem-resultados i {
-            font-size: 1.8rem;
+            font-size: 2.5rem;
             color: #cbd5e1;
-            margin-bottom: 6px;
+            margin-bottom: 10px;
             display: block;
         }
 
         /* ===== TOAST ===== */
         .toast {
             position: fixed;
-            bottom: 20px;
+            bottom: 30px;
             left: 50%;
             transform: translateX(-50%) translateY(100px);
             background: rgba(0, 0, 0, 0.88);
             color: white;
-            padding: 12px 20px;
-            border-radius: 12px;
-            font-size: 0.85rem;
+            padding: 16px 28px;
+            border-radius: 14px;
+            font-size: 1rem;
             font-weight: 600;
             z-index: 999;
             opacity: 0;
@@ -815,10 +816,10 @@
             box-shadow: 0 10px 40px rgba(0,0,0,0.3);
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 12px;
             pointer-events: none;
             width: 90%;
-            max-width: 400px;
+            max-width: 450px;
             justify-content: center;
         }
 
@@ -828,7 +829,7 @@
         }
 
         .toast i {
-            font-size: 1.2rem;
+            font-size: 1.4rem;
         }
 
         .toast.success i {
@@ -840,115 +841,115 @@
         }
 
         /* ===== RESPONSIVO ===== */
-        @media (max-width: 420px) {
+        @media (max-width: 600px) {
             body {
-                padding: 8px 6px;
-                padding-bottom: 20px;
+                padding: 16px 12px;
             }
 
             .card {
-                padding: 12px 10px 10px;
-                border-radius: 14px;
+                padding: 20px 16px 18px;
+                border-radius: 20px;
             }
 
             .grid-2 {
                 grid-template-columns: 1fr;
-                gap: 8px;
+                gap: 14px;
             }
 
             .grid-3 {
                 grid-template-columns: 1fr 1fr;
-                gap: 8px;
+                gap: 14px;
             }
 
             .botoes-row {
                 grid-template-columns: 1fr;
-                gap: 6px;
+                gap: 8px;
             }
 
             .card-header h2 {
-                font-size: 0.95rem;
+                font-size: 1.3rem;
             }
 
             .card-header h2 i {
-                font-size: 0.95rem;
-                width: 30px;
-                height: 30px;
-                padding: 5px;
+                font-size: 1.2rem;
+                width: 40px;
+                height: 40px;
+                padding: 7px;
             }
 
             .checkbox-item {
-                min-height: 44px;
-                padding: 8px 12px;
+                min-height: 52px;
+                padding: 12px 16px;
+                min-width: 100%;
             }
 
             .btn-whatsapp {
-                font-size: 0.85rem;
-                padding: 12px 14px;
-                min-height: 48px;
+                font-size: 1rem;
+                padding: 14px 16px;
+                min-height: 56px;
             }
 
             .btn-whatsapp i {
-                font-size: 1.1rem;
+                font-size: 1.4rem;
             }
 
             .btn-salvar {
-                font-size: 0.8rem;
-                padding: 12px 14px;
-                min-height: 48px;
+                font-size: 0.95rem;
+                padding: 14px 16px;
+                min-height: 56px;
             }
 
             .nav-tab {
-                padding: 8px 14px;
-                font-size: 0.65rem;
+                padding: 12px 24px;
+                font-size: 0.85rem;
             }
 
             .header-title .titulo-principal {
-                font-size: 1.1rem;
+                font-size: 1.6rem;
             }
 
             .header-title .titulo-principal i {
-                font-size: 1rem;
-                width: 34px;
-                height: 34px;
-                padding: 6px;
+                font-size: 1.6rem;
+                width: 48px;
+                height: 48px;
+                padding: 10px;
             }
 
             .header-title .subtitulo {
-                font-size: 0.55rem;
+                font-size: 0.75rem;
             }
 
             .campo input, .campo select {
-                padding: 8px 10px;
-                font-size: 0.8rem;
-                min-height: 40px;
+                padding: 12px 14px;
+                font-size: 0.95rem;
+                min-height: 48px;
             }
 
             .campo label {
-                font-size: 0.55rem;
+                font-size: 0.75rem;
             }
 
             .sub-badge {
-                font-size: 0.55rem;
-                padding: 2px 12px;
+                font-size: 0.7rem;
+                padding: 3px 16px;
             }
 
             .tipo-atendimento .tipo-texto {
-                font-size: 0.65rem;
+                font-size: 0.85rem;
             }
 
             .tipo-atendimento {
-                padding: 8px 12px;
+                padding: 12px 16px;
             }
 
             .tabela-notificacoes {
-                font-size: 0.6rem;
-                min-width: 400px;
+                font-size: 0.75rem;
+                min-width: 500px;
             }
 
             .tabela-notificacoes thead th,
             .tabela-notificacoes tbody td {
-                padding: 4px 6px;
+                padding: 8px 10px;
             }
 
             .btn-whatsapp .telefone-destino {
@@ -962,90 +963,87 @@
             .barra-pesquisa .botoes-pesquisa .btn-pesquisar,
             .barra-pesquisa .botoes-pesquisa .btn-limpar {
                 width: 100%;
+                height: 48px;
+            }
+
+            .barra-pesquisa .campo input {
+                min-height: 48px;
             }
 
             .toast {
-                font-size: 0.75rem;
-                padding: 10px 16px;
+                font-size: 0.9rem;
+                padding: 14px 20px;
                 width: 95%;
             }
         }
 
-        @media (max-width: 360px) {
+        @media (max-width: 400px) {
+            body {
+                padding: 12px 8px;
+            }
+
             .grid-3 {
                 grid-template-columns: 1fr;
             }
 
             .card {
-                padding: 10px 8px 8px;
-                border-radius: 12px;
+                padding: 16px 12px 14px;
+                border-radius: 16px;
             }
 
             .card-header h2 {
-                font-size: 0.85rem;
+                font-size: 1.1rem;
             }
 
             .campo input, .campo select {
-                padding: 7px 8px;
-                font-size: 0.75rem;
-                min-height: 36px;
+                padding: 10px 12px;
+                font-size: 0.9rem;
+                min-height: 44px;
             }
 
             .checkbox-item {
-                min-height: 40px;
-                padding: 6px 10px;
+                min-height: 48px;
+                padding: 10px 14px;
             }
 
             .checkbox-item label {
-                font-size: 0.75rem;
+                font-size: 0.85rem;
             }
 
             .btn-whatsapp {
-                font-size: 0.75rem;
-                padding: 10px 12px;
-                min-height: 44px;
+                font-size: 0.9rem;
+                padding: 12px 14px;
+                min-height: 50px;
             }
 
             .btn-salvar {
-                font-size: 0.75rem;
-                padding: 10px 12px;
-                min-height: 44px;
+                font-size: 0.85rem;
+                padding: 12px 14px;
+                min-height: 50px;
             }
 
             .nav-tab {
-                padding: 6px 10px;
-                font-size: 0.6rem;
+                padding: 10px 18px;
+                font-size: 0.75rem;
             }
 
             .header-title .titulo-principal {
-                font-size: 1rem;
+                font-size: 1.3rem;
             }
 
             .tabela-notificacoes {
-                font-size: 0.5rem;
-                min-width: 320px;
+                font-size: 0.65rem;
+                min-width: 380px;
             }
 
             .tipo-atendimento .tipo-texto {
-                font-size: 0.6rem;
+                font-size: 0.75rem;
             }
-        }
 
-        /* Ajustes para toque */
-        input, select, button, .checkbox-item {
-            touch-action: manipulation;
-        }
-
-        input[type="date"]::-webkit-calendar-picker-indicator,
-        input[type="time"]::-webkit-calendar-picker-indicator {
-            padding: 4px;
-            cursor: pointer;
-        }
-
-        /* Rolagem suave */
-        .tabela-container {
-            -webkit-overflow-scrolling: touch;
-            scroll-behavior: smooth;
+            .toast {
+                font-size: 0.8rem;
+                padding: 12px 16px;
+            }
         }
     </style>
 </head>
@@ -1099,7 +1097,7 @@
                         <div class="campo">
                             <label for="telefone"><i class="fas fa-phone"></i> Telefone</label>
                             <input type="tel" id="telefone" placeholder="DDD + Número" value="">
-                            <small><i class="fas fa-info-circle"></i> Apenas números</small>
+                            <small><i class="fas fa-info-circle"></i> Apenas números com DDD</small>
                         </div>
                     </div>
 
@@ -1108,7 +1106,7 @@
                         <div class="checkbox-item" id="itemTemCrianca">
                             <input type="checkbox" id="temCrianca">
                             <label for="temCrianca">
-                                <i class="fas fa-child"></i> Criança/Adolescente
+                                <i class="fas fa-child"></i> Criança/Adolescente envolvido?
                             </label>
                         </div>
                     </div>
@@ -1594,7 +1592,7 @@
                 const btnSalvarOriginal = btnSalvar.innerHTML;
                 btnSalvar.innerHTML = '<i class="fas fa-check"></i> SALVO!';
                 btnSalvar.style.background = 'linear-gradient(135deg, #22c55e, #16a34a)';
-                btnSalvar.style.boxShadow = '0 4px 0 #15803d';
+                btnSalvar.style.boxShadow = '0 5px 0 #15803d';
                 setTimeout(() => {
                     btnSalvar.innerHTML = btnSalvarOriginal;
                     btnSalvar.style.background = '';
