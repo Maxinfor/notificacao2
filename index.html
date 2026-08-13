@@ -4,30 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
     <title>Notificação - Conselho Tutelar do Paranoá</title>
-    
-    <!-- ===== FAVICON PERSONALIZADO ===== -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%231a2a6c'/><text x='50' y='68' font-size='50' font-weight='bold' text-anchor='middle' fill='%23fbbf24' font-family='Arial'>CT</text></svg>">
-    <link rel="shortcut icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%231a2a6c'/><text x='50' y='68' font-size='50' font-weight='bold' text-anchor='middle' fill='%23fbbf24' font-family='Arial'>CT</text></svg>">
-    
-    <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%231a2a6c'/><text x='50' y='68' font-size='50' font-weight='bold' text-anchor='middle' fill='%23fbbf24' font-family='Arial'>CT</text></svg>">
-    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-        /* ===== ESTILOS COMPLETOS ===== */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             font-family: 'Segoe UI', Roboto, system-ui, -apple-system, sans-serif;
+            -webkit-tap-highlight-color: transparent;
         }
 
         body {
             background: linear-gradient(135deg, #0c1445 0%, #1a2a6c 30%, #1e3a8a 60%, #2563eb 100%);
             min-height: 100vh;
-            padding: 16px 12px;
+            padding: 12px 10px;
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             justify-content: center;
+            padding-bottom: 30px;
         }
 
         body::before {
@@ -37,7 +31,7 @@
             right: -10%;
             width: 600px;
             height: 600px;
-            background: radial-gradient(circle, rgba(255,215,0,0.06) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(255,215,0,0.05) 0%, transparent 70%);
             border-radius: 50%;
             pointer-events: none;
         }
@@ -49,136 +43,83 @@
             left: -10%;
             width: 500px;
             height: 500px;
-            background: radial-gradient(circle, rgba(37,99,235,0.08) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(37,99,235,0.06) 0%, transparent 70%);
             border-radius: 50%;
             pointer-events: none;
         }
 
         .container {
-            max-width: 820px;
+            max-width: 480px;
             width: 100%;
             margin: 0 auto;
             position: relative;
             z-index: 1;
+            padding-bottom: 10px;
         }
 
-        /* ===== TÍTULO SUPERIOR COM LOGO ===== */
+        /* ===== TÍTULO SUPERIOR ===== */
         .header-title {
             text-align: center;
-            margin-bottom: 16px;
-            padding: 8px 16px;
+            margin-bottom: 14px;
+            padding: 6px 10px;
         }
 
-        .header-title .logo-container {
+        .header-title .titulo-principal {
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: #ffffff;
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 14px;
+            gap: 10px;
             flex-wrap: wrap;
-            background: rgba(255, 255, 255, 0.05);
-            padding: 10px 20px;
-            border-radius: 16px;
-            border: 1px solid rgba(255, 215, 0, 0.1);
-            backdrop-filter: blur(10px);
-        }
-
-        .header-title .logo-icone {
-            font-size: 2.4rem;
-            color: #fbbf24;
-            background: rgba(251, 191, 36, 0.1);
-            padding: 8px 14px;
-            border-radius: 12px;
-            border: 2px solid rgba(251, 191, 36, 0.2);
-            line-height: 1;
-        }
-
-        .header-title .logo-texto {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-        }
-
-        .header-title .logo-texto .titulo-principal {
-            font-size: 1.5rem;
-            font-weight: 800;
-            color: #ffffff;
             text-shadow: 0 2px 15px rgba(0,0,0,0.2);
-            letter-spacing: 1px;
-            line-height: 1.2;
         }
 
-        .header-title .logo-texto .titulo-principal .destaque {
+        .header-title .titulo-principal i {
             color: #fbbf24;
+            font-size: 1.3rem;
+            background: rgba(255, 255, 255, 0.08);
+            padding: 8px;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid rgba(255,215,0,0.12);
         }
 
-        .header-title .logo-texto .subtitulo {
-            color: rgba(255, 255, 255, 0.5);
-            font-size: 0.7rem;
+        .header-title .subtitulo {
+            color: rgba(255, 255, 255, 0.45);
+            font-size: 0.65rem;
             font-weight: 300;
             letter-spacing: 2px;
-            text-transform: uppercase;
             margin-top: 2px;
+            text-transform: uppercase;
         }
 
-        .header-title .logo-texto .subtitulo i {
+        .header-title .subtitulo i {
             color: #fbbf24;
             margin: 0 4px;
-        }
-
-        .header-title .logo-texto .subtitulo .separador {
-            color: rgba(255, 255, 255, 0.2);
-            margin: 0 6px;
-        }
-
-        .header-title .logo-texto .subtitulo .telefone-logo {
-            color: #fbbf24;
-            font-weight: 600;
-            letter-spacing: 1px;
-        }
-
-        @media (max-width: 480px) {
-            .header-title .logo-container {
-                flex-direction: column;
-                padding: 12px 16px;
-                gap: 8px;
-            }
-
-            .header-title .logo-texto {
-                align-items: center;
-                text-align: center;
-            }
-
-            .header-title .logo-texto .titulo-principal {
-                font-size: 1.2rem;
-            }
-
-            .header-title .logo-icone {
-                font-size: 2rem;
-                padding: 6px 12px;
-            }
-
-            .header-title .logo-texto .subtitulo {
-                font-size: 0.6rem;
-                letter-spacing: 1px;
-            }
         }
 
         /* ===== NAVEGAÇÃO ===== */
         .nav-tabs {
             display: flex;
             gap: 6px;
-            margin-bottom: 18px;
+            margin-bottom: 14px;
             justify-content: center;
             flex-wrap: wrap;
         }
 
         .nav-tab {
-            padding: 9px 22px;
+            padding: 10px 20px;
             background: rgba(255, 255, 255, 0.06);
             color: rgba(255, 255, 255, 0.5);
             border: 1px solid rgba(255, 255, 255, 0.06);
             border-radius: 50px;
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             font-weight: 600;
             cursor: pointer;
             transition: all 0.3s ease;
@@ -186,12 +127,17 @@
             display: flex;
             align-items: center;
             gap: 8px;
+            -webkit-tap-highlight-color: transparent;
+            touch-action: manipulation;
+        }
+
+        .nav-tab:active {
+            transform: scale(0.95);
         }
 
         .nav-tab:hover {
             background: rgba(255, 255, 255, 0.12);
             color: #fff;
-            transform: translateY(-2px);
             border-color: rgba(255, 215, 0, 0.2);
         }
 
@@ -199,11 +145,11 @@
             background: linear-gradient(135deg, #fbbf24, #f59e0b);
             color: #0c1445;
             border-color: #fbbf24;
-            box-shadow: 0 6px 20px rgba(251, 191, 36, 0.25);
+            box-shadow: 0 4px 15px rgba(251, 191, 36, 0.2);
         }
 
         .nav-tab i {
-            font-size: 0.9rem;
+            font-size: 0.85rem;
         }
 
         .nav-tab .badge-contador {
@@ -211,9 +157,9 @@
             color: white;
             border-radius: 50%;
             padding: 0 6px;
-            font-size: 0.55rem;
-            line-height: 17px;
-            min-width: 17px;
+            font-size: 0.5rem;
+            line-height: 16px;
+            min-width: 16px;
             text-align: center;
         }
 
@@ -227,7 +173,7 @@
         }
 
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(15px); }
+            from { opacity: 0; transform: translateY(12px); }
             to { opacity: 1; transform: translateY(0); }
         }
 
@@ -235,23 +181,18 @@
         .card {
             background: rgba(255, 255, 255, 0.96);
             backdrop-filter: blur(20px);
-            border-radius: 20px;
-            padding: 22px 24px 20px;
+            border-radius: 18px;
+            padding: 16px 14px 14px;
             width: 100%;
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
             transition: 0.3s;
-            border: 1px solid rgba(255, 255, 255, 0.15);
-        }
-
-        .card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.12);
         }
 
         .card-header {
             text-align: center;
-            margin-bottom: 16px;
-            padding-bottom: 12px;
+            margin-bottom: 14px;
+            padding-bottom: 10px;
             border-bottom: 2px solid rgba(37, 99, 235, 0.08);
             position: relative;
         }
@@ -262,31 +203,31 @@
             bottom: -2px;
             left: 50%;
             transform: translateX(-50%);
-            width: 40px;
+            width: 35px;
             height: 3px;
             background: linear-gradient(90deg, #fbbf24, #f59e0b);
             border-radius: 10px;
         }
 
         .card-header h2 {
-            font-size: 1.3rem;
+            font-size: 1.1rem;
             font-weight: 800;
             color: #0c1445;
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 10px;
+            gap: 8px;
             flex-wrap: wrap;
         }
 
         .card-header h2 i {
             color: #2563eb;
-            font-size: 1.3rem;
+            font-size: 1.1rem;
             background: linear-gradient(135deg, #dbeafe, #bfdbfe);
-            padding: 7px;
+            padding: 6px;
             border-radius: 50%;
-            width: 38px;
-            height: 38px;
+            width: 34px;
+            height: 34px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -296,16 +237,16 @@
             background: linear-gradient(135deg, #dbeafe, #bfdbfe);
             color: #1e3a8a;
             font-weight: 600;
-            padding: 3px 16px;
+            padding: 3px 14px;
             border-radius: 40px;
-            font-size: 0.7rem;
+            font-size: 0.6rem;
             display: inline-block;
             margin-top: 3px;
-            border: 1px solid rgba(37, 99, 235, 0.12);
+            border: 1px solid rgba(37, 99, 235, 0.1);
         }
 
         .sub-badge i {
-            margin-right: 5px;
+            margin-right: 4px;
             color: #2563eb;
         }
 
@@ -313,13 +254,13 @@
         .grid-2 {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 12px;
+            gap: 10px;
         }
 
         .grid-3 {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
-            gap: 12px;
+            gap: 10px;
         }
 
         /* ===== CAMPOS ===== */
@@ -332,24 +273,24 @@
             font-weight: 600;
             color: #1e3a8a;
             margin-bottom: 3px;
-            font-size: 0.65rem;
+            font-size: 0.6rem;
             display: flex;
             align-items: center;
-            gap: 5px;
-            letter-spacing: 0.8px;
+            gap: 4px;
+            letter-spacing: 0.6px;
             text-transform: uppercase;
         }
 
         .campo label i {
             color: #2563eb;
             width: 14px;
-            font-size: 0.7rem;
+            font-size: 0.65rem;
             text-align: center;
         }
 
         .campo input,
         .campo select {
-            padding: 9px 12px;
+            padding: 10px 12px;
             border: 2px solid #e2e8f0;
             border-radius: 10px;
             font-size: 0.85rem;
@@ -360,6 +301,8 @@
             appearance: none;
             color: #1a2e3f;
             text-transform: uppercase;
+            min-height: 44px;
+            touch-action: manipulation;
         }
 
         .campo input:focus,
@@ -382,11 +325,12 @@
             background-position: right 10px center;
             background-size: 12px;
             cursor: pointer;
+            padding-right: 32px;
         }
 
         .campo small {
             color: #64748b;
-            font-size: 0.55rem;
+            font-size: 0.5rem;
             margin-top: 2px;
         }
 
@@ -405,16 +349,22 @@
 
         .checkbox-item {
             flex: 1;
-            min-width: 120px;
-            padding: 8px 14px;
+            min-width: 100%;
+            padding: 10px 14px;
             border-radius: 10px;
             border: 2px solid #e2e8f0;
             background: #f8fafc;
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 10px;
             transition: all 0.25s ease;
             cursor: pointer;
+            touch-action: manipulation;
+            min-height: 48px;
+        }
+
+        .checkbox-item:active {
+            transform: scale(0.98);
         }
 
         .checkbox-item:hover {
@@ -428,35 +378,36 @@
         }
 
         .checkbox-item input[type="checkbox"] {
-            width: 16px;
-            height: 16px;
+            width: 20px;
+            height: 20px;
             accent-color: #2563eb;
             cursor: pointer;
             flex-shrink: 0;
+            min-width: 20px;
         }
 
         .checkbox-item label {
             font-weight: 600;
             color: #1e3a8a;
-            font-size: 0.8rem;
+            font-size: 0.85rem;
             cursor: pointer;
             display: flex;
             align-items: center;
-            gap: 5px;
+            gap: 6px;
             width: 100%;
         }
 
         .checkbox-item label i {
             color: #2563eb;
-            font-size: 0.9rem;
-            width: 16px;
+            font-size: 0.95rem;
+            width: 18px;
         }
 
         .checkbox-item .status-label {
             font-size: 0.55rem;
             font-weight: 700;
             margin-left: auto;
-            padding: 2px 8px;
+            padding: 2px 10px;
             border-radius: 20px;
             background: #bfdbfe;
             color: #1e3a8a;
@@ -479,7 +430,7 @@
         /* ===== CAMPO CRIANÇA ===== */
         .campo-crianca-wrapper {
             flex: 1;
-            min-width: 140px;
+            min-width: 100%;
             display: none;
         }
 
@@ -489,13 +440,14 @@
 
         .campo-crianca-wrapper input {
             width: 100%;
-            padding: 8px 12px;
+            padding: 10px 12px;
             border: 2px solid #e2e8f0;
             border-radius: 10px;
-            font-size: 0.8rem;
+            font-size: 0.85rem;
             background: #ffffff;
             text-transform: uppercase;
             transition: 0.2s;
+            min-height: 44px;
         }
 
         .campo-crianca-wrapper input:focus {
@@ -508,7 +460,7 @@
         .tipo-atendimento {
             background: linear-gradient(135deg, #eff6ff, #dbeafe);
             border-radius: 10px;
-            padding: 8px 14px;
+            padding: 10px 14px;
             margin: 4px 0 6px;
             border: 1px solid #bfdbfe;
             display: flex;
@@ -518,14 +470,15 @@
         }
 
         .tipo-atendimento i {
-            font-size: 1rem;
-            width: 22px;
+            font-size: 0.95rem;
+            width: 20px;
             text-align: center;
         }
 
         .tipo-atendimento .tipo-texto {
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             color: #1e3a8a;
+            flex: 1;
         }
 
         .tipo-atendimento .tipo-texto strong {
@@ -533,19 +486,19 @@
         }
 
         .tipo-atendimento .tipo-badge {
-            margin-left: auto;
-            padding: 2px 12px;
+            padding: 3px 12px;
             border-radius: 30px;
-            font-size: 0.6rem;
+            font-size: 0.55rem;
             font-weight: 700;
             background: linear-gradient(135deg, #2563eb, #1d4ed8);
             color: white;
-            box-shadow: 0 2px 8px rgba(37, 99, 235, 0.25);
+            box-shadow: 0 2px 8px rgba(37, 99, 235, 0.2);
+            white-space: nowrap;
         }
 
         .tipo-atendimento .tipo-badge.apenas-responsavel {
             background: linear-gradient(135deg, #f59e0b, #d97706);
-            box-shadow: 0 2px 8px rgba(245, 158, 11, 0.25);
+            box-shadow: 0 2px 8px rgba(245, 158, 11, 0.2);
         }
 
         /* ===== BOTÕES ===== */
@@ -553,7 +506,7 @@
             background: linear-gradient(135deg, #25d366, #1da851);
             color: white;
             border: none;
-            padding: 12px 16px;
+            padding: 14px 16px;
             border-radius: 50px;
             font-size: 0.95rem;
             font-weight: 700;
@@ -564,19 +517,16 @@
             justify-content: center;
             gap: 10px;
             transition: all 0.2s ease;
-            box-shadow: 0 4px 0 #15803d, 0 4px 15px rgba(37, 211, 102, 0.25);
+            box-shadow: 0 4px 0 #15803d, 0 4px 15px rgba(37, 211, 102, 0.2);
             margin-top: 4px;
             letter-spacing: 0.3px;
-        }
-
-        .btn-whatsapp:hover {
-            transform: translateY(-2px);
-            background: linear-gradient(135deg, #2ad86b, #1fb854);
-            box-shadow: 0 6px 0 #15803d, 0 6px 20px rgba(37, 211, 102, 0.35);
+            min-height: 52px;
+            touch-action: manipulation;
+            -webkit-tap-highlight-color: transparent;
         }
 
         .btn-whatsapp:active {
-            transform: translateY(3px) scale(0.98);
+            transform: scale(0.97);
             box-shadow: 0 2px 0 #15803d;
         }
 
@@ -585,11 +535,11 @@
         }
 
         .btn-whatsapp .telefone-destino {
-            font-size: 0.65rem;
+            font-size: 0.6rem;
             font-weight: 400;
             opacity: 0.9;
             background: rgba(255,255,255,0.12);
-            padding: 2px 8px;
+            padding: 2px 10px;
             border-radius: 30px;
             margin-left: 4px;
         }
@@ -598,7 +548,7 @@
             background: linear-gradient(135deg, #2563eb, #1d4ed8);
             color: white;
             border: none;
-            padding: 10px 14px;
+            padding: 14px 16px;
             border-radius: 50px;
             font-size: 0.9rem;
             font-weight: 700;
@@ -609,18 +559,15 @@
             justify-content: center;
             gap: 8px;
             transition: all 0.2s ease;
-            box-shadow: 0 4px 0 #1a3a8a, 0 4px 15px rgba(37, 99, 235, 0.25);
+            box-shadow: 0 4px 0 #1a3a8a, 0 4px 15px rgba(37, 99, 235, 0.2);
             margin-top: 4px;
-        }
-
-        .btn-salvar:hover {
-            transform: translateY(-2px);
-            background: linear-gradient(135deg, #3b82f6, #2563eb);
-            box-shadow: 0 6px 0 #1a3a8a, 0 6px 20px rgba(37, 99, 235, 0.35);
+            min-height: 52px;
+            touch-action: manipulation;
+            -webkit-tap-highlight-color: transparent;
         }
 
         .btn-salvar:active {
-            transform: translateY(3px) scale(0.98);
+            transform: scale(0.97);
             box-shadow: 0 2px 0 #1a3a8a;
         }
 
@@ -631,21 +578,21 @@
         .botoes-row {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 10px;
+            gap: 8px;
             margin-top: 4px;
         }
 
         .footer-obs {
-            font-size: 0.55rem;
+            font-size: 0.5rem;
             color: #64748b;
             text-align: center;
-            margin-top: 12px;
+            margin-top: 10px;
             border-top: 1px solid #e2e8f0;
             padding-top: 10px;
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 5px;
+            gap: 4px;
         }
 
         .footer-obs i {
@@ -654,7 +601,7 @@
 
         /* ===== SAUDAÇÃO INDICATOR ===== */
         .saudacao-indicator {
-            font-size: 0.55rem;
+            font-size: 0.5rem;
             background: linear-gradient(135deg, #dbeafe, #bfdbfe);
             padding: 2px 8px;
             border-radius: 20px;
@@ -667,25 +614,37 @@
         /* ===== PÁGINA 2 - HISTÓRICO ===== */
         .barra-pesquisa {
             display: flex;
+            flex-direction: column;
             gap: 8px;
-            margin-bottom: 14px;
-            flex-wrap: wrap;
+            margin-bottom: 12px;
         }
 
         .barra-pesquisa .campo {
-            flex: 1;
-            min-width: 140px;
+            min-width: unset;
         }
 
         .barra-pesquisa .campo input {
             text-transform: none;
+            min-height: 44px;
+        }
+
+        .barra-pesquisa .botoes-pesquisa {
+            display: flex;
+            gap: 8px;
+        }
+
+        .barra-pesquisa .botoes-pesquisa .btn-pesquisar,
+        .barra-pesquisa .botoes-pesquisa .btn-limpar {
+            flex: 1;
+            justify-content: center;
+            height: 44px;
         }
 
         .btn-pesquisar {
             background: linear-gradient(135deg, #2563eb, #1d4ed8);
             color: white;
             border: none;
-            padding: 9px 18px;
+            padding: 10px 16px;
             border-radius: 50px;
             font-size: 0.8rem;
             font-weight: 600;
@@ -696,17 +655,12 @@
             transition: all 0.2s ease;
             box-shadow: 0 3px 0 #1a3a8a;
             white-space: nowrap;
-            height: 40px;
-        }
-
-        .btn-pesquisar:hover {
-            transform: translateY(-2px);
-            background: linear-gradient(135deg, #3b82f6, #2563eb);
-            box-shadow: 0 5px 0 #1a3a8a;
+            touch-action: manipulation;
+            -webkit-tap-highlight-color: transparent;
         }
 
         .btn-pesquisar:active {
-            transform: translateY(2px);
+            transform: scale(0.97);
             box-shadow: 0 1px 0 #1a3a8a;
         }
 
@@ -714,7 +668,7 @@
             background: #f1f5f9;
             color: #1e3a8a;
             border: 2px solid #e2e8f0;
-            padding: 9px 18px;
+            padding: 10px 16px;
             border-radius: 50px;
             font-size: 0.8rem;
             font-weight: 600;
@@ -724,19 +678,19 @@
             gap: 6px;
             transition: all 0.2s ease;
             white-space: nowrap;
-            height: 40px;
+            touch-action: manipulation;
+            -webkit-tap-highlight-color: transparent;
         }
 
-        .btn-limpar:hover {
-            background: #e2e8f0;
-            border-color: #2563eb;
+        .btn-limpar:active {
+            transform: scale(0.97);
         }
 
         .contador {
             background: linear-gradient(135deg, #eff6ff, #dbeafe);
             padding: 4px 12px;
             border-radius: 30px;
-            font-size: 0.7rem;
+            font-size: 0.65rem;
             color: #1e3a8a;
             font-weight: 600;
             display: inline-block;
@@ -746,21 +700,22 @@
 
         .contador i {
             color: #2563eb;
-            margin-right: 5px;
+            margin-right: 4px;
         }
 
         .tabela-container {
             overflow-x: auto;
-            border-radius: 12px;
+            border-radius: 10px;
             border: 1px solid #e2e8f0;
             background: #f8fafc;
+            -webkit-overflow-scrolling: touch;
         }
 
         .tabela-notificacoes {
             width: 100%;
             border-collapse: collapse;
-            font-size: 0.75rem;
-            min-width: 650px;
+            font-size: 0.7rem;
+            min-width: 550px;
         }
 
         .tabela-notificacoes thead {
@@ -769,16 +724,16 @@
         }
 
         .tabela-notificacoes thead th {
-            padding: 8px 10px;
+            padding: 8px 8px;
             text-align: left;
             font-weight: 600;
-            font-size: 0.6rem;
-            letter-spacing: 0.8px;
+            font-size: 0.55rem;
+            letter-spacing: 0.6px;
             text-transform: uppercase;
         }
 
         .tabela-notificacoes tbody td {
-            padding: 7px 10px;
+            padding: 6px 8px;
             border-bottom: 1px solid #e2e8f0;
             color: #1e293b;
             vertical-align: middle;
@@ -796,7 +751,7 @@
             display: inline-block;
             padding: 2px 8px;
             border-radius: 30px;
-            font-size: 0.55rem;
+            font-size: 0.5rem;
             font-weight: 600;
         }
 
@@ -814,7 +769,7 @@
             display: inline-block;
             padding: 2px 8px;
             border-radius: 30px;
-            font-size: 0.5rem;
+            font-size: 0.45rem;
             font-weight: 700;
         }
 
@@ -830,28 +785,28 @@
 
         .sem-resultados {
             text-align: center;
-            padding: 25px 16px;
+            padding: 20px 12px;
             color: #94a3b8;
         }
 
         .sem-resultados i {
-            font-size: 2rem;
+            font-size: 1.8rem;
             color: #cbd5e1;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
             display: block;
         }
 
         /* ===== TOAST ===== */
         .toast {
             position: fixed;
-            bottom: 30px;
+            bottom: 20px;
             left: 50%;
             transform: translateX(-50%) translateY(100px);
-            background: rgba(0, 0, 0, 0.85);
+            background: rgba(0, 0, 0, 0.88);
             color: white;
-            padding: 12px 28px;
+            padding: 12px 20px;
             border-radius: 12px;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             font-weight: 600;
             z-index: 999;
             opacity: 0;
@@ -860,8 +815,11 @@
             box-shadow: 0 10px 40px rgba(0,0,0,0.3);
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 10px;
             pointer-events: none;
+            width: 90%;
+            max-width: 400px;
+            justify-content: center;
         }
 
         .toast.show {
@@ -870,7 +828,7 @@
         }
 
         .toast i {
-            font-size: 1.4rem;
+            font-size: 1.2rem;
         }
 
         .toast.success i {
@@ -882,14 +840,15 @@
         }
 
         /* ===== RESPONSIVO ===== */
-        @media (max-width: 768px) {
+        @media (max-width: 420px) {
             body {
-                padding: 12px 8px;
+                padding: 8px 6px;
+                padding-bottom: 20px;
             }
 
             .card {
-                padding: 16px 14px 14px;
-                border-radius: 16px;
+                padding: 12px 10px 10px;
+                border-radius: 14px;
             }
 
             .grid-2 {
@@ -908,110 +867,6 @@
             }
 
             .card-header h2 {
-                font-size: 1.1rem;
-            }
-
-            .card-header h2 i {
-                font-size: 1.1rem;
-                width: 34px;
-                height: 34px;
-                padding: 6px;
-            }
-
-            .checkbox-item {
-                min-width: 100px;
-                padding: 7px 12px;
-            }
-
-            .btn-whatsapp {
-                font-size: 0.85rem;
-                padding: 10px 12px;
-            }
-
-            .btn-whatsapp i {
-                font-size: 1.1rem;
-            }
-
-            .btn-salvar {
-                font-size: 0.8rem;
-                padding: 9px 12px;
-            }
-
-            .nav-tab {
-                padding: 7px 14px;
-                font-size: 0.7rem;
-            }
-
-            .barra-pesquisa {
-                flex-direction: column;
-            }
-
-            .barra-pesquisa .campo {
-                min-width: unset;
-            }
-
-            .btn-pesquisar, .btn-limpar {
-                width: 100%;
-                justify-content: center;
-                height: 36px;
-            }
-
-            .tabela-notificacoes {
-                font-size: 0.65rem;
-                min-width: 480px;
-            }
-
-            .tabela-notificacoes thead th,
-            .tabela-notificacoes tbody td {
-                padding: 5px 8px;
-            }
-
-            .campo-crianca-wrapper {
-                min-width: unset;
-                width: 100%;
-            }
-
-            .checkbox-group {
-                flex-direction: column;
-            }
-
-            .tipo-atendimento {
-                flex-wrap: wrap;
-                padding: 6px 12px;
-            }
-            .tipo-atendimento .tipo-badge {
-                margin-left: 0;
-            }
-            .tipo-atendimento .tipo-texto {
-                font-size: 0.75rem;
-            }
-
-            .campo input, .campo select {
-                padding: 8px 10px;
-                font-size: 0.8rem;
-            }
-
-            .campo label {
-                font-size: 0.6rem;
-            }
-
-            .sub-badge {
-                font-size: 0.65rem;
-                padding: 3px 14px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .grid-3 {
-                grid-template-columns: 1fr;
-            }
-
-            .card {
-                padding: 12px 10px 10px;
-                border-radius: 14px;
-            }
-
-            .card-header h2 {
                 font-size: 0.95rem;
             }
 
@@ -1022,54 +877,175 @@
                 padding: 5px;
             }
 
-            .campo input, .campo select {
-                padding: 7px 10px;
-                font-size: 0.75rem;
+            .checkbox-item {
+                min-height: 44px;
+                padding: 8px 12px;
             }
 
-            .btn-whatsapp .telefone-destino {
-                display: none;
+            .btn-whatsapp {
+                font-size: 0.85rem;
+                padding: 12px 14px;
+                min-height: 48px;
             }
 
-            .tabela-notificacoes {
-                font-size: 0.55rem;
-                min-width: 350px;
+            .btn-whatsapp i {
+                font-size: 1.1rem;
+            }
+
+            .btn-salvar {
+                font-size: 0.8rem;
+                padding: 12px 14px;
+                min-height: 48px;
             }
 
             .nav-tab {
-                padding: 5px 12px;
-                font-size: 0.6rem;
+                padding: 8px 14px;
+                font-size: 0.65rem;
             }
 
-            .nav-tab i {
-                font-size: 0.7rem;
+            .header-title .titulo-principal {
+                font-size: 1.1rem;
             }
 
-            .checkbox-item {
-                min-width: 80px;
-                padding: 6px 10px;
+            .header-title .titulo-principal i {
+                font-size: 1rem;
+                width: 34px;
+                height: 34px;
+                padding: 6px;
             }
 
-            .checkbox-item label {
-                font-size: 0.7rem;
+            .header-title .subtitulo {
+                font-size: 0.55rem;
+            }
+
+            .campo input, .campo select {
+                padding: 8px 10px;
+                font-size: 0.8rem;
+                min-height: 40px;
+            }
+
+            .campo label {
+                font-size: 0.55rem;
             }
 
             .sub-badge {
                 font-size: 0.55rem;
-                padding: 2px 10px;
+                padding: 2px 12px;
             }
 
             .tipo-atendimento .tipo-texto {
                 font-size: 0.65rem;
             }
 
-            .toast {
-                bottom: 20px;
-                padding: 10px 20px;
-                font-size: 0.8rem;
-                width: 90%;
-                justify-content: center;
+            .tipo-atendimento {
+                padding: 8px 12px;
             }
+
+            .tabela-notificacoes {
+                font-size: 0.6rem;
+                min-width: 400px;
+            }
+
+            .tabela-notificacoes thead th,
+            .tabela-notificacoes tbody td {
+                padding: 4px 6px;
+            }
+
+            .btn-whatsapp .telefone-destino {
+                display: none;
+            }
+
+            .barra-pesquisa .botoes-pesquisa {
+                flex-direction: column;
+            }
+
+            .barra-pesquisa .botoes-pesquisa .btn-pesquisar,
+            .barra-pesquisa .botoes-pesquisa .btn-limpar {
+                width: 100%;
+            }
+
+            .toast {
+                font-size: 0.75rem;
+                padding: 10px 16px;
+                width: 95%;
+            }
+        }
+
+        @media (max-width: 360px) {
+            .grid-3 {
+                grid-template-columns: 1fr;
+            }
+
+            .card {
+                padding: 10px 8px 8px;
+                border-radius: 12px;
+            }
+
+            .card-header h2 {
+                font-size: 0.85rem;
+            }
+
+            .campo input, .campo select {
+                padding: 7px 8px;
+                font-size: 0.75rem;
+                min-height: 36px;
+            }
+
+            .checkbox-item {
+                min-height: 40px;
+                padding: 6px 10px;
+            }
+
+            .checkbox-item label {
+                font-size: 0.75rem;
+            }
+
+            .btn-whatsapp {
+                font-size: 0.75rem;
+                padding: 10px 12px;
+                min-height: 44px;
+            }
+
+            .btn-salvar {
+                font-size: 0.75rem;
+                padding: 10px 12px;
+                min-height: 44px;
+            }
+
+            .nav-tab {
+                padding: 6px 10px;
+                font-size: 0.6rem;
+            }
+
+            .header-title .titulo-principal {
+                font-size: 1rem;
+            }
+
+            .tabela-notificacoes {
+                font-size: 0.5rem;
+                min-width: 320px;
+            }
+
+            .tipo-atendimento .tipo-texto {
+                font-size: 0.6rem;
+            }
+        }
+
+        /* Ajustes para toque */
+        input, select, button, .checkbox-item {
+            touch-action: manipulation;
+        }
+
+        input[type="date"]::-webkit-calendar-picker-indicator,
+        input[type="time"]::-webkit-calendar-picker-indicator {
+            padding: 4px;
+            cursor: pointer;
+        }
+
+        /* Rolagem suave */
+        .tabela-container {
+            -webkit-overflow-scrolling: touch;
+            scroll-behavior: smooth;
         }
     </style>
 </head>
@@ -1081,19 +1057,14 @@
     </div>
 
     <div class="container">
-        <!-- ===== TÍTULO SUPERIOR COM LOGO ===== -->
+        <!-- ===== TÍTULO SUPERIOR ===== -->
         <div class="header-title">
-            <div class="logo-container">
-                <div class="logo-icone">🏛️</div>
-                <div class="logo-texto">
-                    <div class="titulo-principal">
-                        <span class="destaque">CONSELHO</span> TUTELAR
-                    </div>
-                    <div class="subtitulo">
-                        <i class="fas fa-map-pin"></i> Paranoá <span class="separador">|</span> 
-                        <i class="fas fa-phone"></i> <span class="telefone-logo">9.9241-2057</span>
-                    </div>
-                </div>
+            <div class="titulo-principal">
+                <i class="fas fa-gavel"></i>
+                NOTIFICAÇÃO
+            </div>
+            <div class="subtitulo">
+                <i class="fas fa-map-pin"></i> Conselho Tutelar do Paranoá
             </div>
         </div>
 
@@ -1115,7 +1086,7 @@
                     <h2>
                         <i class="fas fa-file-signature"></i> NOVA NOTIFICAÇÃO
                     </h2>
-                    <span class="sub-badge"><i class="fas fa-phone"></i> 9.9241-2057</span>
+                    <span class="sub-badge"><i class="fas fa-phone"></i> (61) 99999-8888</span>
                 </div>
 
                 <div class="card-body">
@@ -1123,12 +1094,12 @@
                     <div class="grid-2">
                         <div class="campo">
                             <label for="responsavel"><i class="fas fa-user"></i> Responsável</label>
-                            <input type="text" id="responsavel" placeholder="Nome do(a) responsável" value="">
+                            <input type="text" id="responsavel" placeholder="Nome do responsável" value="">
                         </div>
                         <div class="campo">
                             <label for="telefone"><i class="fas fa-phone"></i> Telefone</label>
                             <input type="tel" id="telefone" placeholder="DDD + Número" value="">
-                            <small><i class="fas fa-info-circle"></i> Apenas números com DDD</small>
+                            <small><i class="fas fa-info-circle"></i> Apenas números</small>
                         </div>
                     </div>
 
@@ -1216,12 +1187,14 @@
                             <label for="pesquisar"><i class="fas fa-search"></i> Pesquisar</label>
                             <input type="text" id="pesquisar" placeholder="Busque por qualquer termo...">
                         </div>
-                        <button class="btn-pesquisar" id="btnPesquisar">
-                            <i class="fas fa-search"></i> PESQUISAR
-                        </button>
-                        <button class="btn-limpar" id="btnLimparPesquisa">
-                            <i class="fas fa-times"></i> LIMPAR
-                        </button>
+                        <div class="botoes-pesquisa">
+                            <button class="btn-pesquisar" id="btnPesquisar">
+                                <i class="fas fa-search"></i> PESQUISAR
+                            </button>
+                            <button class="btn-limpar" id="btnLimparPesquisa">
+                                <i class="fas fa-times"></i> LIMPAR
+                            </button>
+                        </div>
                     </div>
 
                     <div class="contador" id="contadorRegistros">
@@ -1371,36 +1344,15 @@
                 }
             }
 
-            function obterTratamento(nome) {
-                if (!nome || nome.trim() === '') return 'Sr(a).';
-                const femininas = ['a', 'e', 'i', 'o', 'u', 'á', 'é', 'í', 'ó', 'ú', 'ã', 'õ', 'â', 'ê', 'ô'];
-                const ultimaLetra = nome.trim().toLowerCase().slice(-1);
-                if (femininas.includes(ultimaLetra)) {
-                    return 'Sra.';
-                }
-                return 'Sr.';
-            }
-
-            function obterTratamentoConselheiro(nome) {
-                if (!nome) return 'Conselheira(o)';
-                const conselheiras = ['Cláudia', 'Lucinea', 'Samara', 'Sandra'];
-                if (conselheiras.includes(nome)) {
-                    return 'Conselheira';
-                }
-                return 'Conselheiro';
-            }
-
             function gerarMensagem() {
                 const nomeResp = responsavel.value.trim() || "RESPONSÁVEL";
                 const nomeCrianca = criancaInput.value.trim();
                 const dataRaw = dataInput.value || new Date().toISOString().split('T')[0];
                 const horaRaw = horaInput.value || "10:00";
-                const conselheiroSel = conselheiro.value || "Nadelço";
+                const conselheiroSel = conselheiro.value || "Conselheiro(a)";
                 const temCriancaChecked = temCrianca.checked;
 
                 const saudacao = obterSaudacao(horaRaw);
-                const tratamento = obterTratamento(nomeResp);
-                const tratamentoConselheiro = obterTratamentoConselheiro(conselheiroSel);
 
                 let dataFormatada = dataRaw;
                 if (dataRaw.includes('-')) {
@@ -1422,16 +1374,16 @@
                 msg += `Somos do Conselho Tutelar do Paranoá.\n\n`;
 
                 if (!temCriancaChecked) {
-                    msg += `Solicitamos o comparecimento da ${tratamento} ${nomeRespNegrito}, para atendimento e esclarecimentos relacionados à criança/adolescente.\n\n`;
-                    msg += `Ressaltamos que este é um atendimento com o(a) responsável, não sendo necessário trazer a criança/adolescente neste momento.\n\n`;
+                    msg += `Solicitamos o comparecimento da Sra. ${nomeRespNegrito}, para atendimento e esclarecimentos relacionados à criança/adolescente.\n\n`;
+                    msg += `Ressaltamos que este é um atendimento com a responsável, não sendo necessário trazer a criança/adolescente neste momento.\n\n`;
                 } else {
                     if (nomeCrianca === '') {
-                        msg += `Solicitamos o comparecimento da ${tratamento} ${nomeRespNegrito}, responsável por criança/adolescente não informado(a), para atendimento e esclarecimentos relacionados à criança/adolescente.\n\n`;
+                        msg += `Solicitamos o comparecimento da Sra. ${nomeRespNegrito}, responsável por criança/adolescente não informado(a), para atendimento e esclarecimentos relacionados à criança/adolescente.\n\n`;
                     } else {
-                        msg += `Solicitamos o comparecimento da ${tratamento} ${nomeRespNegrito}, responsável por ${nomeCriancaNegrito}, para atendimento e esclarecimentos relacionados à criança/adolescente.\n\n`;
+                        msg += `Solicitamos o comparecimento da Sra. ${nomeRespNegrito}, responsável por ${nomeCriancaNegrito}, para atendimento e esclarecimentos relacionados à criança/adolescente.\n\n`;
                     }
-                    msg += `Solicitamos que o(a) responsável compareça acompanhado(a) de ${nomeCriancaNegrito} e apresente, se disponíveis:\n\n`;
-                    msg += `• Documento de identificação do(a) responsável;\n`;
+                    msg += `Solicitamos que a responsável compareça acompanhada de ${nomeCriancaNegrito} e apresente, se disponíveis:\n\n`;
+                    msg += `• Documento de identificação da responsável;\n`;
                     msg += `• Documento de identificação da criança/adolescente ou certidão de nascimento;\n`;
                     msg += `• Comprovante de residência;\n`;
                     msg += `• Cartão de vacinação;\n`;
@@ -1440,12 +1392,9 @@
 
                 msg += `📅 Data: ${dataFormatada}\n`;
                 msg += `⏰ Horário: ${horaFormatada}\n`;
-                msg += `👤 Atendimento: ${tratamentoConselheiro} Tutelar ${conselheiroSel}\n`;
+                msg += `👤 Atendimento: Conselheira Tutelar ${conselheiroSel}\n`;
                 msg += `📍 Local: Conselho Tutelar do Paranoá – Área Especial, Quadra 21, ao lado da UBS 01.\n\n`;
-                
-                // ===== FRASE EM NEGRITO =====
-                msg += `*Favor confirmar o recebimento desta mensagem.*\n\n`;
-                
+                msg += `Favor confirmar o recebimento desta mensagem.\n\n`;
                 msg += `⚠️ O não comparecimento injustificado poderá acarretar as medidas previstas no Estatuto da Criança e do Adolescente (ECA).`;
 
                 return msg;
@@ -1515,7 +1464,7 @@
                 criancaInput.value = '';
                 dataInput.value = '';
                 horaInput.value = '';
-                conselheiro.selectedIndex = 0;
+                conselheiro.selectedIndex = 2;
                 campoCrianca.classList.remove('visible');
                 itemTemCrianca.classList.remove('active');
                 atualizarTudo();
@@ -1689,14 +1638,8 @@
                 
                 const telefoneVal = telefone.value.trim();
                 if (!telefoneVal || telefoneVal.length < 10) {
-                    mostrarToast('Por favor, informe um telefone válido com DDD.', 'info');
+                    mostrarToast('Informe um telefone válido com DDD.', 'info');
                     telefone.focus();
-                    return;
-                }
-
-                if (!responsavel.value.trim()) {
-                    mostrarToast('Por favor, informe o nome do(a) responsável.', 'info');
-                    responsavel.focus();
                     return;
                 }
 
@@ -1753,7 +1696,7 @@
 
             btnSalvar.addEventListener('click', function() {
                 if (!responsavel.value.trim()) {
-                    mostrarToast('Por favor, informe o nome do(a) responsável.', 'info');
+                    mostrarToast('Informe o nome do responsável.', 'info');
                     responsavel.focus();
                     return;
                 }
