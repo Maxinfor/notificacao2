@@ -1342,6 +1342,19 @@
                 }
             }
 
+            // ========================================
+            // FUNÇÃO PARA OBTER TRATAMENTO DO CONSELHEIRO
+            // ========================================
+            function getTratamentoConselheiro(nome) {
+                // Nadelço é masculino - usa "Conselheiro"
+                // Os demais são femininos - usa "Conselheira"
+                if (nome === 'Nadelço') {
+                    return 'Conselheiro';
+                } else {
+                    return 'Conselheira';
+                }
+            }
+
             function gerarMensagem() {
                 const nomeResp = responsavel.value.trim() || "RESPONSÁVEL";
                 const nomeCrianca = criancaInput.value.trim();
@@ -1368,10 +1381,12 @@
                 const nomeRespNegrito = `*${nomeResp}*`;
                 const nomeCriancaNegrito = nomeCrianca ? `*${nomeCrianca}*` : 'criança/adolescente';
 
+                // Obtém o tratamento correto para o conselheiro
+                const tratamentoConselheiro = getTratamentoConselheiro(conselheiroSel);
+
                 let msg = `${saudacao}! Como vai?\n\n`;
                 msg += `Somos do Conselho Tutelar do Paranoá.\n\n`;
 
-                // ===== NOVA FRASE =====
                 if (!temCriancaChecked) {
                     msg += `Solicitamos o comparecimento do(a) ${nomeRespNegrito}, para atendimento e esclarecimentos relacionados à criança/adolescente.\n\n`;
                     msg += `Ressaltamos que este é um atendimento com a responsável, não sendo necessário trazer a criança/adolescente neste momento.\n\n`;
@@ -1391,7 +1406,7 @@
 
                 msg += `📅 Data: ${dataFormatada}\n`;
                 msg += `⏰ Horário: ${horaFormatada}\n`;
-                msg += `👤 Atendimento: Conselheira Tutelar ${conselheiroSel}\n`;
+                msg += `👤 Atendimento: ${tratamentoConselheiro} Tutelar ${conselheiroSel}\n`;
                 msg += `📍 Local: Conselho Tutelar do Paranoá – Área Especial, Quadra 21, ao lado da UBS 01.\n\n`;
                 msg += `Favor confirmar o recebimento desta mensagem.\n\n`;
                 msg += `⚠️ O não comparecimento injustificado poderá acarretar as medidas previstas no Estatuto da Criança e do Adolescente (ECA).`;
