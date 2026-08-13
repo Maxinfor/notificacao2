@@ -17,7 +17,7 @@
         body {
             background: linear-gradient(135deg, #0c1445 0%, #1a2a6c 30%, #1e3a8a 60%, #2563eb 100%);
             min-height: 100vh;
-            padding: 20px 16px;
+            padding: 16px 12px;
             display: flex;
             align-items: flex-start;
             justify-content: center;
@@ -48,7 +48,7 @@
         }
 
         .container {
-            max-width: 100%;
+            max-width: 820px;
             width: 100%;
             margin: 0 auto;
             position: relative;
@@ -58,30 +58,30 @@
         /* ===== TÍTULO SUPERIOR ===== */
         .header-title {
             text-align: center;
-            margin-bottom: 20px;
-            padding: 10px 0;
+            margin-bottom: 16px;
+            padding: 6px 0;
         }
 
         .header-title .titulo-principal {
-            font-size: 2rem;
+            font-size: 1.6rem;
             font-weight: 800;
             color: #ffffff;
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 14px;
+            gap: 12px;
             flex-wrap: wrap;
             text-shadow: 0 2px 15px rgba(0,0,0,0.2);
         }
 
         .header-title .titulo-principal i {
             color: #fbbf24;
-            font-size: 2rem;
+            font-size: 1.6rem;
             background: rgba(255, 255, 255, 0.08);
-            padding: 12px;
+            padding: 10px;
             border-radius: 50%;
-            width: 56px;
-            height: 56px;
+            width: 48px;
+            height: 48px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -90,10 +90,10 @@
 
         .header-title .subtitulo {
             color: rgba(255, 255, 255, 0.5);
-            font-size: 0.9rem;
+            font-size: 0.75rem;
             font-weight: 300;
             letter-spacing: 3px;
-            margin-top: 6px;
+            margin-top: 4px;
             text-transform: uppercase;
         }
 
@@ -105,26 +105,26 @@
         /* ===== NAVEGAÇÃO ===== */
         .nav-tabs {
             display: flex;
-            gap: 10px;
-            margin-bottom: 20px;
+            gap: 8px;
+            margin-bottom: 16px;
             justify-content: center;
             flex-wrap: wrap;
         }
 
         .nav-tab {
-            padding: 14px 32px;
+            padding: 10px 24px;
             background: rgba(255, 255, 255, 0.08);
             color: rgba(255, 255, 255, 0.6);
             border: 1px solid rgba(255, 255, 255, 0.08);
             border-radius: 50px;
-            font-size: 1rem;
+            font-size: 0.85rem;
             font-weight: 600;
             cursor: pointer;
             transition: all 0.3s ease;
             backdrop-filter: blur(10px);
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 8px;
             -webkit-tap-highlight-color: transparent;
             touch-action: manipulation;
         }
@@ -143,21 +143,21 @@
             background: linear-gradient(135deg, #fbbf24, #f59e0b);
             color: #0c1445;
             border-color: #fbbf24;
-            box-shadow: 0 6px 25px rgba(251, 191, 36, 0.25);
+            box-shadow: 0 4px 20px rgba(251, 191, 36, 0.25);
         }
 
         .nav-tab i {
-            font-size: 1.1rem;
+            font-size: 0.95rem;
         }
 
         .nav-tab .badge-contador {
             background: #ef4444;
             color: white;
             border-radius: 50%;
-            padding: 0 8px;
-            font-size: 0.65rem;
-            line-height: 20px;
-            min-width: 20px;
+            padding: 0 6px;
+            font-size: 0.55rem;
+            line-height: 18px;
+            min-width: 18px;
             text-align: center;
         }
 
@@ -171,7 +171,7 @@
         }
 
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(15px); }
+            from { opacity: 0; transform: translateY(12px); }
             to { opacity: 1; transform: translateY(0); }
         }
 
@@ -179,18 +179,23 @@
         .card {
             background: rgba(255, 255, 255, 0.96);
             backdrop-filter: blur(20px);
-            border-radius: 24px;
-            padding: 28px 24px 24px;
+            border-radius: 20px;
+            padding: 22px 20px 20px;
             width: 100%;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
             transition: 0.3s;
             border: 1px solid rgba(255, 255, 255, 0.12);
         }
 
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 20px 55px rgba(0, 0, 0, 0.25);
+        }
+
         .card-header {
             text-align: center;
-            margin-bottom: 20px;
-            padding-bottom: 14px;
+            margin-bottom: 16px;
+            padding-bottom: 12px;
             border-bottom: 2px solid rgba(37, 99, 235, 0.08);
             position: relative;
         }
@@ -201,31 +206,31 @@
             bottom: -2px;
             left: 50%;
             transform: translateX(-50%);
-            width: 50px;
+            width: 40px;
             height: 3px;
             background: linear-gradient(90deg, #fbbf24, #f59e0b);
             border-radius: 10px;
         }
 
         .card-header h2 {
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             font-weight: 800;
             color: #0c1445;
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 12px;
+            gap: 10px;
             flex-wrap: wrap;
         }
 
         .card-header h2 i {
             color: #2563eb;
-            font-size: 1.4rem;
+            font-size: 1.2rem;
             background: linear-gradient(135deg, #dbeafe, #bfdbfe);
-            padding: 8px;
+            padding: 6px;
             border-radius: 50%;
-            width: 44px;
-            height: 44px;
+            width: 38px;
+            height: 38px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -235,16 +240,16 @@
             background: linear-gradient(135deg, #dbeafe, #bfdbfe);
             color: #1e3a8a;
             font-weight: 600;
-            padding: 4px 20px;
+            padding: 3px 16px;
             border-radius: 40px;
-            font-size: 0.8rem;
+            font-size: 0.7rem;
             display: inline-block;
-            margin-top: 4px;
+            margin-top: 3px;
             border: 1px solid rgba(37, 99, 235, 0.1);
         }
 
         .sub-badge i {
-            margin-right: 6px;
+            margin-right: 5px;
             color: #2563eb;
         }
 
@@ -252,13 +257,13 @@
         .grid-2 {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 16px;
+            gap: 14px;
         }
 
         .grid-3 {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
-            gap: 16px;
+            gap: 14px;
         }
 
         /* ===== CAMPOS ===== */
@@ -270,28 +275,28 @@
         .campo label {
             font-weight: 600;
             color: #1e3a8a;
-            margin-bottom: 5px;
-            font-size: 0.8rem;
+            margin-bottom: 4px;
+            font-size: 0.7rem;
             display: flex;
             align-items: center;
-            gap: 6px;
+            gap: 5px;
             letter-spacing: 0.6px;
             text-transform: uppercase;
         }
 
         .campo label i {
             color: #2563eb;
-            width: 18px;
-            font-size: 0.85rem;
+            width: 16px;
+            font-size: 0.75rem;
             text-align: center;
         }
 
         .campo input,
         .campo select {
-            padding: 14px 16px;
+            padding: 11px 14px;
             border: 2px solid #e2e8f0;
-            border-radius: 12px;
-            font-size: 1rem;
+            border-radius: 10px;
+            font-size: 0.9rem;
             background: #f8fafc;
             transition: all 0.25s ease;
             width: 100%;
@@ -299,7 +304,7 @@
             appearance: none;
             color: #1a2e3f;
             text-transform: uppercase;
-            min-height: 52px;
+            min-height: 44px;
             touch-action: manipulation;
         }
 
@@ -308,32 +313,32 @@
             border-color: #2563eb;
             outline: none;
             background: #ffffff;
-            box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.08);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.08);
         }
 
         .campo input::placeholder {
             color: #94a3b8;
             text-transform: none;
-            font-size: 0.95rem;
+            font-size: 0.85rem;
         }
 
         .campo select {
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%232563eb' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%232563eb' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
             background-repeat: no-repeat;
-            background-position: right 14px center;
-            background-size: 14px;
+            background-position: right 12px center;
+            background-size: 12px;
             cursor: pointer;
-            padding-right: 40px;
+            padding-right: 34px;
         }
 
         .campo small {
             color: #64748b;
-            font-size: 0.65rem;
-            margin-top: 4px;
+            font-size: 0.55rem;
+            margin-top: 3px;
         }
 
         .campo small i {
-            margin-right: 4px;
+            margin-right: 3px;
             color: #2563eb;
         }
 
@@ -341,24 +346,24 @@
         .checkbox-group {
             display: flex;
             flex-wrap: wrap;
-            gap: 12px;
-            margin: 4px 0 8px;
+            gap: 10px;
+            margin: 3px 0 6px;
         }
 
         .checkbox-item {
             flex: 1;
-            min-width: 160px;
-            padding: 14px 18px;
-            border-radius: 12px;
+            min-width: 140px;
+            padding: 11px 16px;
+            border-radius: 10px;
             border: 2px solid #e2e8f0;
             background: #f8fafc;
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 10px;
             transition: all 0.25s ease;
             cursor: pointer;
             touch-action: manipulation;
-            min-height: 56px;
+            min-height: 48px;
         }
 
         .checkbox-item:active {
@@ -376,36 +381,36 @@
         }
 
         .checkbox-item input[type="checkbox"] {
-            width: 22px;
-            height: 22px;
+            width: 19px;
+            height: 19px;
             accent-color: #2563eb;
             cursor: pointer;
             flex-shrink: 0;
-            min-width: 22px;
+            min-width: 19px;
         }
 
         .checkbox-item label {
             font-weight: 600;
             color: #1e3a8a;
-            font-size: 0.95rem;
+            font-size: 0.85rem;
             cursor: pointer;
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 6px;
             width: 100%;
         }
 
         .checkbox-item label i {
             color: #2563eb;
-            font-size: 1.1rem;
-            width: 20px;
+            font-size: 0.95rem;
+            width: 18px;
         }
 
         .checkbox-item .status-label {
-            font-size: 0.65rem;
+            font-size: 0.55rem;
             font-weight: 700;
             margin-left: auto;
-            padding: 3px 12px;
+            padding: 2px 10px;
             border-radius: 20px;
             background: #bfdbfe;
             color: #1e3a8a;
@@ -430,7 +435,7 @@
             flex: 1;
             min-width: 100%;
             display: none;
-            margin-bottom: 4px;
+            margin-bottom: 3px;
         }
 
         .campo-crianca-wrapper.visible {
@@ -439,43 +444,43 @@
 
         .campo-crianca-wrapper input {
             width: 100%;
-            padding: 14px 16px;
+            padding: 11px 14px;
             border: 2px solid #e2e8f0;
-            border-radius: 12px;
-            font-size: 1rem;
+            border-radius: 10px;
+            font-size: 0.9rem;
             background: #ffffff;
             text-transform: uppercase;
             transition: 0.2s;
-            min-height: 52px;
+            min-height: 44px;
         }
 
         .campo-crianca-wrapper input:focus {
             border-color: #2563eb;
             outline: none;
-            box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.08);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.08);
         }
 
         /* ===== TIPO ATENDIMENTO ===== */
         .tipo-atendimento {
             background: linear-gradient(135deg, #eff6ff, #dbeafe);
-            border-radius: 12px;
-            padding: 14px 18px;
-            margin: 6px 0 10px;
+            border-radius: 10px;
+            padding: 10px 16px;
+            margin: 5px 0 8px;
             border: 1px solid #bfdbfe;
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 10px;
             flex-wrap: wrap;
         }
 
         .tipo-atendimento i {
-            font-size: 1.2rem;
-            width: 26px;
+            font-size: 1rem;
+            width: 22px;
             text-align: center;
         }
 
         .tipo-atendimento .tipo-texto {
-            font-size: 0.9rem;
+            font-size: 0.8rem;
             color: #1e3a8a;
             flex: 1;
         }
@@ -485,19 +490,19 @@
         }
 
         .tipo-atendimento .tipo-badge {
-            padding: 4px 16px;
+            padding: 3px 14px;
             border-radius: 30px;
-            font-size: 0.7rem;
+            font-size: 0.6rem;
             font-weight: 700;
             background: linear-gradient(135deg, #2563eb, #1d4ed8);
             color: white;
-            box-shadow: 0 2px 10px rgba(37, 99, 235, 0.2);
+            box-shadow: 0 2px 8px rgba(37, 99, 235, 0.2);
             white-space: nowrap;
         }
 
         .tipo-atendimento .tipo-badge.apenas-responsavel {
             background: linear-gradient(135deg, #f59e0b, #d97706);
-            box-shadow: 0 2px 10px rgba(245, 158, 11, 0.2);
+            box-shadow: 0 2px 8px rgba(245, 158, 11, 0.2);
         }
 
         /* ===== BOTÕES ===== */
@@ -505,51 +510,9 @@
             background: linear-gradient(135deg, #25d366, #1da851);
             color: white;
             border: none;
-            padding: 16px 20px;
+            padding: 13px 18px;
             border-radius: 50px;
-            font-size: 1.1rem;
-            font-weight: 700;
-            width: 100%;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 12px;
-            transition: all 0.2s ease;
-            box-shadow: 0 5px 0 #15803d, 0 4px 20px rgba(37, 211, 102, 0.25);
-            margin-top: 6px;
-            letter-spacing: 0.3px;
-            min-height: 60px;
-            touch-action: manipulation;
-            -webkit-tap-highlight-color: transparent;
-        }
-
-        .btn-whatsapp:active {
-            transform: scale(0.97);
-            box-shadow: 0 3px 0 #15803d;
-        }
-
-        .btn-whatsapp i {
-            font-size: 1.6rem;
-        }
-
-        .btn-whatsapp .telefone-destino {
-            font-size: 0.7rem;
-            font-weight: 400;
-            opacity: 0.9;
-            background: rgba(255,255,255,0.12);
-            padding: 3px 12px;
-            border-radius: 30px;
-            margin-left: 6px;
-        }
-
-        .btn-salvar {
-            background: linear-gradient(135deg, #2563eb, #1d4ed8);
-            color: white;
-            border: none;
-            padding: 16px 20px;
-            border-radius: 50px;
-            font-size: 1.05rem;
+            font-size: 0.95rem;
             font-weight: 700;
             width: 100%;
             cursor: pointer;
@@ -558,40 +521,82 @@
             justify-content: center;
             gap: 10px;
             transition: all 0.2s ease;
-            box-shadow: 0 5px 0 #1a3a8a, 0 4px 20px rgba(37, 99, 235, 0.25);
-            margin-top: 6px;
-            min-height: 60px;
+            box-shadow: 0 4px 0 #15803d, 0 4px 15px rgba(37, 211, 102, 0.2);
+            margin-top: 5px;
+            letter-spacing: 0.3px;
+            min-height: 52px;
+            touch-action: manipulation;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .btn-whatsapp:active {
+            transform: scale(0.97);
+            box-shadow: 0 2px 0 #15803d;
+        }
+
+        .btn-whatsapp i {
+            font-size: 1.3rem;
+        }
+
+        .btn-whatsapp .telefone-destino {
+            font-size: 0.6rem;
+            font-weight: 400;
+            opacity: 0.9;
+            background: rgba(255,255,255,0.12);
+            padding: 2px 10px;
+            border-radius: 30px;
+            margin-left: 5px;
+        }
+
+        .btn-salvar {
+            background: linear-gradient(135deg, #2563eb, #1d4ed8);
+            color: white;
+            border: none;
+            padding: 13px 18px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            width: 100%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 0 #1a3a8a, 0 4px 15px rgba(37, 99, 235, 0.2);
+            margin-top: 5px;
+            min-height: 52px;
             touch-action: manipulation;
             -webkit-tap-highlight-color: transparent;
         }
 
         .btn-salvar:active {
             transform: scale(0.97);
-            box-shadow: 0 3px 0 #1a3a8a;
+            box-shadow: 0 2px 0 #1a3a8a;
         }
 
         .btn-salvar i {
-            font-size: 1.2rem;
+            font-size: 1rem;
         }
 
         .botoes-row {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 12px;
-            margin-top: 6px;
+            gap: 10px;
+            margin-top: 5px;
         }
 
         .footer-obs {
-            font-size: 0.65rem;
+            font-size: 0.55rem;
             color: #64748b;
             text-align: center;
-            margin-top: 14px;
+            margin-top: 12px;
             border-top: 1px solid #e2e8f0;
-            padding-top: 14px;
+            padding-top: 10px;
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 6px;
+            gap: 5px;
         }
 
         .footer-obs i {
@@ -600,11 +605,11 @@
 
         /* ===== SAUDAÇÃO INDICATOR ===== */
         .saudacao-indicator {
-            font-size: 0.65rem;
+            font-size: 0.55rem;
             background: linear-gradient(135deg, #dbeafe, #bfdbfe);
-            padding: 3px 10px;
+            padding: 2px 8px;
             border-radius: 20px;
-            margin-left: 6px;
+            margin-left: 5px;
             font-weight: 700;
             color: #1e3a8a;
             white-space: nowrap;
@@ -614,8 +619,8 @@
         .barra-pesquisa {
             display: flex;
             flex-direction: column;
-            gap: 10px;
-            margin-bottom: 16px;
+            gap: 8px;
+            margin-bottom: 12px;
         }
 
         .barra-pesquisa .campo {
@@ -624,37 +629,37 @@
 
         .barra-pesquisa .campo input {
             text-transform: none;
-            min-height: 52px;
-            font-size: 1rem;
+            min-height: 44px;
+            font-size: 0.9rem;
         }
 
         .barra-pesquisa .botoes-pesquisa {
             display: flex;
-            gap: 10px;
+            gap: 8px;
         }
 
         .barra-pesquisa .botoes-pesquisa .btn-pesquisar,
         .barra-pesquisa .botoes-pesquisa .btn-limpar {
             flex: 1;
             justify-content: center;
-            height: 52px;
-            font-size: 0.95rem;
+            height: 44px;
+            font-size: 0.8rem;
         }
 
         .btn-pesquisar {
             background: linear-gradient(135deg, #2563eb, #1d4ed8);
             color: white;
             border: none;
-            padding: 12px 20px;
+            padding: 10px 18px;
             border-radius: 50px;
-            font-size: 0.9rem;
+            font-size: 0.8rem;
             font-weight: 600;
             cursor: pointer;
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 6px;
             transition: all 0.2s ease;
-            box-shadow: 0 4px 0 #1a3a8a;
+            box-shadow: 0 3px 0 #1a3a8a;
             white-space: nowrap;
             touch-action: manipulation;
             -webkit-tap-highlight-color: transparent;
@@ -662,21 +667,21 @@
 
         .btn-pesquisar:active {
             transform: scale(0.97);
-            box-shadow: 0 2px 0 #1a3a8a;
+            box-shadow: 0 1px 0 #1a3a8a;
         }
 
         .btn-limpar {
             background: #f1f5f9;
             color: #1e3a8a;
             border: 2px solid #e2e8f0;
-            padding: 12px 20px;
+            padding: 10px 18px;
             border-radius: 50px;
-            font-size: 0.9rem;
+            font-size: 0.8rem;
             font-weight: 600;
             cursor: pointer;
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 6px;
             transition: all 0.2s ease;
             white-space: nowrap;
             touch-action: manipulation;
@@ -689,24 +694,24 @@
 
         .contador {
             background: linear-gradient(135deg, #eff6ff, #dbeafe);
-            padding: 6px 16px;
+            padding: 4px 12px;
             border-radius: 30px;
-            font-size: 0.8rem;
+            font-size: 0.7rem;
             color: #1e3a8a;
             font-weight: 600;
             display: inline-block;
-            margin-bottom: 12px;
+            margin-bottom: 10px;
             border: 1px solid #bfdbfe;
         }
 
         .contador i {
             color: #2563eb;
-            margin-right: 6px;
+            margin-right: 5px;
         }
 
         .tabela-container {
             overflow-x: auto;
-            border-radius: 12px;
+            border-radius: 10px;
             border: 1px solid #e2e8f0;
             background: #f8fafc;
             -webkit-overflow-scrolling: touch;
@@ -715,8 +720,8 @@
         .tabela-notificacoes {
             width: 100%;
             border-collapse: collapse;
-            font-size: 0.85rem;
-            min-width: 650px;
+            font-size: 0.75rem;
+            min-width: 600px;
         }
 
         .tabela-notificacoes thead {
@@ -725,16 +730,16 @@
         }
 
         .tabela-notificacoes thead th {
-            padding: 12px 14px;
+            padding: 10px 12px;
             text-align: left;
             font-weight: 600;
-            font-size: 0.7rem;
+            font-size: 0.6rem;
             letter-spacing: 0.8px;
             text-transform: uppercase;
         }
 
         .tabela-notificacoes tbody td {
-            padding: 10px 14px;
+            padding: 8px 12px;
             border-bottom: 1px solid #e2e8f0;
             color: #1e293b;
             vertical-align: middle;
@@ -750,9 +755,9 @@
 
         .badge-status {
             display: inline-block;
-            padding: 4px 12px;
+            padding: 3px 10px;
             border-radius: 30px;
-            font-size: 0.65rem;
+            font-size: 0.55rem;
             font-weight: 600;
         }
 
@@ -768,9 +773,9 @@
 
         .badge-tipo {
             display: inline-block;
-            padding: 3px 10px;
+            padding: 2px 8px;
             border-radius: 30px;
-            font-size: 0.6rem;
+            font-size: 0.5rem;
             font-weight: 700;
         }
 
@@ -786,28 +791,28 @@
 
         .sem-resultados {
             text-align: center;
-            padding: 30px 16px;
+            padding: 25px 12px;
             color: #94a3b8;
         }
 
         .sem-resultados i {
-            font-size: 2.5rem;
+            font-size: 2rem;
             color: #cbd5e1;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
             display: block;
         }
 
         /* ===== TOAST ===== */
         .toast {
             position: fixed;
-            bottom: 30px;
+            bottom: 25px;
             left: 50%;
             transform: translateX(-50%) translateY(100px);
             background: rgba(0, 0, 0, 0.88);
             color: white;
-            padding: 16px 28px;
-            border-radius: 14px;
-            font-size: 1rem;
+            padding: 14px 24px;
+            border-radius: 12px;
+            font-size: 0.9rem;
             font-weight: 600;
             z-index: 999;
             opacity: 0;
@@ -816,10 +821,10 @@
             box-shadow: 0 10px 40px rgba(0,0,0,0.3);
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 10px;
             pointer-events: none;
             width: 90%;
-            max-width: 450px;
+            max-width: 400px;
             justify-content: center;
         }
 
@@ -829,7 +834,7 @@
         }
 
         .toast i {
-            font-size: 1.4rem;
+            font-size: 1.2rem;
         }
 
         .toast.success i {
@@ -841,115 +846,119 @@
         }
 
         /* ===== RESPONSIVO ===== */
-        @media (max-width: 600px) {
+        @media (max-width: 768px) {
             body {
-                padding: 16px 12px;
+                padding: 12px 8px;
+            }
+
+            .container {
+                max-width: 100%;
             }
 
             .card {
-                padding: 20px 16px 18px;
-                border-radius: 20px;
+                padding: 16px 14px 14px;
+                border-radius: 16px;
             }
 
             .grid-2 {
                 grid-template-columns: 1fr;
-                gap: 14px;
+                gap: 10px;
             }
 
             .grid-3 {
                 grid-template-columns: 1fr 1fr;
-                gap: 14px;
+                gap: 10px;
             }
 
             .botoes-row {
                 grid-template-columns: 1fr;
-                gap: 8px;
+                gap: 6px;
             }
 
             .card-header h2 {
-                font-size: 1.3rem;
+                font-size: 1.1rem;
             }
 
             .card-header h2 i {
-                font-size: 1.2rem;
-                width: 40px;
-                height: 40px;
-                padding: 7px;
+                font-size: 1rem;
+                width: 34px;
+                height: 34px;
+                padding: 5px;
             }
 
             .checkbox-item {
-                min-height: 52px;
-                padding: 12px 16px;
+                min-height: 44px;
+                padding: 10px 14px;
                 min-width: 100%;
             }
 
             .btn-whatsapp {
-                font-size: 1rem;
-                padding: 14px 16px;
-                min-height: 56px;
-            }
-
-            .btn-whatsapp i {
-                font-size: 1.4rem;
-            }
-
-            .btn-salvar {
-                font-size: 0.95rem;
-                padding: 14px 16px;
-                min-height: 56px;
-            }
-
-            .nav-tab {
-                padding: 12px 24px;
                 font-size: 0.85rem;
-            }
-
-            .header-title .titulo-principal {
-                font-size: 1.6rem;
-            }
-
-            .header-title .titulo-principal i {
-                font-size: 1.6rem;
-                width: 48px;
-                height: 48px;
-                padding: 10px;
-            }
-
-            .header-title .subtitulo {
-                font-size: 0.75rem;
-            }
-
-            .campo input, .campo select {
                 padding: 12px 14px;
-                font-size: 0.95rem;
                 min-height: 48px;
             }
 
+            .btn-whatsapp i {
+                font-size: 1.1rem;
+            }
+
+            .btn-salvar {
+                font-size: 0.8rem;
+                padding: 12px 14px;
+                min-height: 48px;
+            }
+
+            .nav-tab {
+                padding: 8px 16px;
+                font-size: 0.7rem;
+            }
+
+            .header-title .titulo-principal {
+                font-size: 1.3rem;
+            }
+
+            .header-title .titulo-principal i {
+                font-size: 1.3rem;
+                width: 42px;
+                height: 42px;
+                padding: 8px;
+            }
+
+            .header-title .subtitulo {
+                font-size: 0.65rem;
+            }
+
+            .campo input, .campo select {
+                padding: 10px 12px;
+                font-size: 0.85rem;
+                min-height: 40px;
+            }
+
             .campo label {
-                font-size: 0.75rem;
+                font-size: 0.65rem;
             }
 
             .sub-badge {
-                font-size: 0.7rem;
-                padding: 3px 16px;
+                font-size: 0.6rem;
+                padding: 2px 14px;
             }
 
             .tipo-atendimento .tipo-texto {
-                font-size: 0.85rem;
+                font-size: 0.75rem;
             }
 
             .tipo-atendimento {
-                padding: 12px 16px;
+                padding: 10px 14px;
             }
 
             .tabela-notificacoes {
-                font-size: 0.75rem;
-                min-width: 500px;
+                font-size: 0.7rem;
+                min-width: 480px;
             }
 
             .tabela-notificacoes thead th,
             .tabela-notificacoes tbody td {
-                padding: 8px 10px;
+                padding: 6px 8px;
             }
 
             .btn-whatsapp .telefone-destino {
@@ -963,23 +972,23 @@
             .barra-pesquisa .botoes-pesquisa .btn-pesquisar,
             .barra-pesquisa .botoes-pesquisa .btn-limpar {
                 width: 100%;
-                height: 48px;
+                height: 40px;
             }
 
             .barra-pesquisa .campo input {
-                min-height: 48px;
+                min-height: 40px;
             }
 
             .toast {
-                font-size: 0.9rem;
-                padding: 14px 20px;
+                font-size: 0.8rem;
+                padding: 12px 16px;
                 width: 95%;
             }
         }
 
-        @media (max-width: 400px) {
+        @media (max-width: 480px) {
             body {
-                padding: 12px 8px;
+                padding: 8px 4px;
             }
 
             .grid-3 {
@@ -987,62 +996,103 @@
             }
 
             .card {
-                padding: 16px 12px 14px;
-                border-radius: 16px;
+                padding: 12px 10px 10px;
+                border-radius: 14px;
             }
 
             .card-header h2 {
-                font-size: 1.1rem;
+                font-size: 0.95rem;
             }
 
             .campo input, .campo select {
-                padding: 10px 12px;
-                font-size: 0.9rem;
-                min-height: 44px;
+                padding: 8px 10px;
+                font-size: 0.8rem;
+                min-height: 36px;
             }
 
             .checkbox-item {
-                min-height: 48px;
-                padding: 10px 14px;
+                min-height: 40px;
+                padding: 8px 12px;
             }
 
             .checkbox-item label {
-                font-size: 0.85rem;
+                font-size: 0.75rem;
             }
 
             .btn-whatsapp {
-                font-size: 0.9rem;
-                padding: 12px 14px;
-                min-height: 50px;
+                font-size: 0.75rem;
+                padding: 10px 12px;
+                min-height: 44px;
             }
 
             .btn-salvar {
-                font-size: 0.85rem;
-                padding: 12px 14px;
-                min-height: 50px;
+                font-size: 0.75rem;
+                padding: 10px 12px;
+                min-height: 44px;
             }
 
             .nav-tab {
-                padding: 10px 18px;
-                font-size: 0.75rem;
+                padding: 6px 12px;
+                font-size: 0.6rem;
             }
 
             .header-title .titulo-principal {
-                font-size: 1.3rem;
+                font-size: 1.1rem;
+            }
+
+            .header-title .titulo-principal i {
+                font-size: 1.1rem;
+                width: 36px;
+                height: 36px;
+                padding: 6px;
             }
 
             .tabela-notificacoes {
-                font-size: 0.65rem;
-                min-width: 380px;
+                font-size: 0.6rem;
+                min-width: 350px;
             }
 
             .tipo-atendimento .tipo-texto {
-                font-size: 0.75rem;
+                font-size: 0.65rem;
             }
 
             .toast {
-                font-size: 0.8rem;
-                padding: 12px 16px;
+                font-size: 0.7rem;
+                padding: 10px 14px;
+            }
+        }
+
+        /* Ajustes para telas grandes */
+        @media (min-width: 1200px) {
+            .container {
+                max-width: 780px;
+            }
+
+            .card {
+                padding: 28px 26px 24px;
+                border-radius: 24px;
+            }
+
+            .campo input, .campo select {
+                padding: 13px 16px;
+                font-size: 0.95rem;
+                min-height: 48px;
+            }
+
+            .btn-whatsapp {
+                padding: 15px 20px;
+                font-size: 1rem;
+                min-height: 56px;
+            }
+
+            .btn-salvar {
+                padding: 15px 20px;
+                font-size: 0.95rem;
+                min-height: 56px;
+            }
+
+            .card-header h2 {
+                font-size: 1.4rem;
             }
         }
     </style>
@@ -1346,8 +1396,6 @@
             // FUNÇÃO PARA OBTER TRATAMENTO DO CONSELHEIRO
             // ========================================
             function getTratamentoConselheiro(nome) {
-                // Nadelço é masculino - usa "Conselheiro"
-                // Os demais são femininos - usa "Conselheira"
                 if (nome === 'Nadelço') {
                     return 'Conselheiro';
                 } else {
@@ -1381,23 +1429,22 @@
                 const nomeRespNegrito = `*${nomeResp}*`;
                 const nomeCriancaNegrito = nomeCrianca ? `*${nomeCrianca}*` : 'criança/adolescente';
 
-                // Obtém o tratamento correto para o conselheiro
                 const tratamentoConselheiro = getTratamentoConselheiro(conselheiroSel);
 
                 let msg = `${saudacao}! Como vai?\n\n`;
                 msg += `Somos do Conselho Tutelar do Paranoá.\n\n`;
 
                 if (!temCriancaChecked) {
-                    msg += `Solicitamos o comparecimento do(a) ${nomeRespNegrito}, para atendimento e esclarecimentos relacionados à criança/adolescente.\n\n`;
-                    msg += `Ressaltamos que este é um atendimento com a responsável, não sendo necessário trazer a criança/adolescente neste momento.\n\n`;
+                    msg += `Solicitamos o comparecimento do(a) Senhor(a) ${nomeRespNegrito}, para atendimento e esclarecimentos relacionados à criança/adolescente.\n\n`;
+                    msg += `Ressaltamos que este é um atendimento com o(a) responsável, não sendo necessário trazer a criança/adolescente neste momento.\n\n`;
                 } else {
                     if (nomeCrianca === '') {
-                        msg += `Solicitamos o comparecimento do(a) ${nomeRespNegrito}, responsável por criança/adolescente não informado(a), para atendimento e esclarecimentos relacionados à criança/adolescente.\n\n`;
+                        msg += `Solicitamos o comparecimento do(a) Senhor(a) ${nomeRespNegrito}, responsável por criança/adolescente não informado(a), para atendimento e esclarecimentos relacionados à criança/adolescente.\n\n`;
                     } else {
-                        msg += `Solicitamos o comparecimento do(a) ${nomeRespNegrito}, responsável por ${nomeCriancaNegrito}, para atendimento e esclarecimentos relacionados à criança/adolescente.\n\n`;
+                        msg += `Solicitamos o comparecimento do(a) Senhor(a) ${nomeRespNegrito}, responsável por ${nomeCriancaNegrito}, para atendimento e esclarecimentos relacionados à criança/adolescente.\n\n`;
                     }
-                    msg += `Solicitamos que a responsável compareça acompanhada de ${nomeCriancaNegrito} e apresente, se disponíveis:\n\n`;
-                    msg += `• Documento de identificação da responsável;\n`;
+                    msg += `Solicitamos que o(a) responsável compareça acompanhado(a) de ${nomeCriancaNegrito} e apresente, se disponíveis:\n\n`;
+                    msg += `• Documento de identificação do(a) responsável;\n`;
                     msg += `• Documento de identificação da criança/adolescente ou certidão de nascimento;\n`;
                     msg += `• Comprovante de residência;\n`;
                     msg += `• Cartão de vacinação;\n`;
@@ -1406,9 +1453,11 @@
 
                 msg += `📅 Data: ${dataFormatada}\n`;
                 msg += `⏰ Horário: ${horaFormatada}\n`;
-                msg += `👤 Atendimento: ${tratamentoConselheiro} Tutelar ${conselheiroSel}\n`;
+                msg += `👤 Atendimento: ${tratamentoConselheiro} ${conselheiroSel}\n`;
                 msg += `📍 Local: Conselho Tutelar do Paranoá – Área Especial, Quadra 21, ao lado da UBS 01.\n\n`;
-                msg += `Favor confirmar o recebimento desta mensagem.\n\n`;
+                
+                msg += `*Favor confirmar o recebimento desta mensagem.*\n\n`;
+                
                 msg += `⚠️ O não comparecimento injustificado poderá acarretar as medidas previstas no Estatuto da Criança e do Adolescente (ECA).`;
 
                 return msg;
@@ -1608,7 +1657,7 @@
                 const btnSalvarOriginal = btnSalvar.innerHTML;
                 btnSalvar.innerHTML = '<i class="fas fa-check"></i> SALVO!';
                 btnSalvar.style.background = 'linear-gradient(135deg, #22c55e, #16a34a)';
-                btnSalvar.style.boxShadow = '0 5px 0 #15803d';
+                btnSalvar.style.boxShadow = '0 4px 0 #15803d';
                 setTimeout(() => {
                     btnSalvar.innerHTML = btnSalvarOriginal;
                     btnSalvar.style.background = '';
