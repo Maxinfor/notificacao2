@@ -5,9 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
     <title>Notificação - Conselho Tutelar do Paranoá</title>
     
-    <!-- ===== FAVICON ===== -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90' font-weight='bold' fill='%23fbbf24'>🏛️</text></svg>">
-    <link rel="shortcut icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90' font-weight='bold' fill='%23fbbf24'>🏛️</text></svg>">
+    <!-- ===== FAVICON PERSONALIZADO ===== -->
+    <!-- Ícone principal com CT (Conselho Tutelar) -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%231a2a6c'/><text x='50' y='68' font-size='50' font-weight='bold' text-anchor='middle' fill='%23fbbf24' font-family='Arial'>CT</text></svg>">
+    <link rel="shortcut icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%231a2a6c'/><text x='50' y='68' font-size='50' font-weight='bold' text-anchor='middle' fill='%23fbbf24' font-family='Arial'>CT</text></svg>">
+    
+    <!-- Apple touch icon para iPhone/iPad -->
+    <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%231a2a6c'/><text x='50' y='68' font-size='50' font-weight='bold' text-anchor='middle' fill='%23fbbf24' font-family='Arial'>CT</text></svg>">
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
@@ -1379,16 +1383,26 @@
                 return 'Sr.';
             }
 
+            function obterTratamentoConselheiro(nome) {
+                if (!nome) return 'Conselheira(o)';
+                const conselheiras = ['Cláudia', 'Lucinea', 'Samara', 'Sandra'];
+                if (conselheiras.includes(nome)) {
+                    return 'Conselheira';
+                }
+                return 'Conselheiro';
+            }
+
             function gerarMensagem() {
                 const nomeResp = responsavel.value.trim() || "RESPONSÁVEL";
                 const nomeCrianca = criancaInput.value.trim();
                 const dataRaw = dataInput.value || new Date().toISOString().split('T')[0];
                 const horaRaw = horaInput.value || "10:00";
-                const conselheiroSel = conselheiro.value || "Conselheiro(a)";
+                const conselheiroSel = conselheiro.value || "Nadelço";
                 const temCriancaChecked = temCrianca.checked;
 
                 const saudacao = obterSaudacao(horaRaw);
                 const tratamento = obterTratamento(nomeResp);
+                const tratamentoConselheiro = obterTratamentoConselheiro(conselheiroSel);
 
                 let dataFormatada = dataRaw;
                 if (dataRaw.includes('-')) {
@@ -1428,9 +1442,12 @@
 
                 msg += `📅 Data: ${dataFormatada}\n`;
                 msg += `⏰ Horário: ${horaFormatada}\n`;
-                msg += `👤 Atendimento: Conselheira Tutelar ${conselheiroSel}\n`;
+                msg += `👤 Atendimento: ${tratamentoConselheiro} Tutelar ${conselheiroSel}\n`;
                 msg += `📍 Local: Conselho Tutelar do Paranoá – Área Especial, Quadra 21, ao lado da UBS 01.\n\n`;
-                msg += `Favor confirmar o recebimento desta mensagem.\n\n`;
+                
+                // ===== FRASE EM NEGRITO =====
+                msg += `*Favor confirmar o recebimento desta mensagem.*\n\n`;
+                
                 msg += `⚠️ O não comparecimento injustificado poderá acarretar as medidas previstas no Estatuto da Criança e do Adolescente (ECA).`;
 
                 return msg;
